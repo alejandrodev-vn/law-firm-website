@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "siteName": "Minh An Law Firm",
+    "tagline": "Professional Legal Counsel — Integrity — Transparency"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "practiceAreas": "Practice Areas",
+    "team": "Our Team",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "home": {
+    "heroTitle": "Partnering with businesses on their path to sustainable growth",
+    "heroSubtitle": "Minh An Law Firm provides comprehensive legal advisory services for domestic and international enterprises, backed by experienced attorneys with deep knowledge of Vietnamese law.",
+    "ctaContact": "Contact Us",
+    "ctaPractice": "Practice Areas",
+    "statsYears": "Years of Experience",
+    "statsCases": "Cases Handled",
+    "statsClients": "Corporate Clients",
+    "whyTitle": "Why Choose Minh An?",
+    "whyItems": {
+      "expertise": {
+        "title": "Deep Expertise",
+        "desc": "Attorneys skilled across multiple practice areas, continuously updated on legal developments."
+      },
+      "trust": {
+        "title": "Integrity & Confidentiality",
+        "desc": "Committed to client confidentiality and handling every matter with the utmost professionalism."
+      },
+      "efficiency": {
+        "title": "Efficient & Transparent",
+        "desc": "Clear workflows, regular progress reports, and optimized legal costs."
+      }
+    },
+    "practiceTitle": "Practice Areas",
+    "practiceSubtitle": "We support clients across key areas of law.",
+    "teamTitle": "Our Attorneys",
+    "teamSubtitle": "Dedicated legal professionals ready to assist you.",
+    "newsTitle": "News & Legal Insights",
+    "newsSubtitle": "Latest legal updates and in-depth analysis.",
+    "viewAll": "View All",
+    "credentialsTitle": "Certifications & Memberships",
+    "processTitle": "Our Process",
+    "processSubtitle": "A clear, transparent workflow — ensuring clients always understand progress and outcomes.",
+    "processSteps": {
+      "step1": {
+        "title": "Initial Consultation",
+        "desc": "Listen to your needs, analyze the situation, and propose an appropriate approach."
+      },
+      "step2": {
+        "title": "Legal Analysis",
+        "desc": "Research regulations, assess risks, and develop a detailed strategy."
+      },
+      "step3": {
+        "title": "Implementation",
+        "desc": "Draft documents, represent in negotiations or litigation per the agreed plan."
+      },
+      "step4": {
+        "title": "Follow-up & Support",
+        "desc": "Report results, provide post-matter advisory, and support long-term compliance."
+      }
+    },
+    "testimonialsTitle": "What Our Clients Say",
+    "testimonialsSubtitle": "The trust of businesses is our most important measure of service quality.",
+    "ctaTitle": "Need Legal Advice?",
+    "ctaSubtitle": "Contact us today — initial consultation is complimentary for businesses.",
+    "ctaButton": "Schedule a Consultation"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Over 15 years partnering with Vietnamese businesses",
+    "intro": "Minh An Law Firm was founded with the mission of providing high-quality legal advisory services, helping clients resolve legal matters efficiently and safely. We believe law is a tool to protect legitimate rights and promote sustainable development.",
+    "missionTitle": "Mission",
+    "mission": "To deliver comprehensive, accurate, and timely legal solutions that contribute to a transparent and compliant business environment.",
+    "visionTitle": "Vision",
+    "vision": "To become a leading law firm in Vietnam, trusted by domestic and international enterprises.",
+    "historyTitle": "Our History",
+    "history": "Since 2010, Minh An Law Firm has continuously expanded its team and elevated service quality. We now serve over 200 domestic and international businesses across corporate, labor, real estate, and intellectual property law.",
+    "valuesTitle": "Core Values",
+    "values": {
+      "integrity": "Integrity — Acting honestly and ethically in every situation.",
+      "professionalism": "Professionalism — Upholding the highest standards of legal practice.",
+      "dedication": "Dedication — Placing client interests at the forefront.",
+      "confidentiality": "Confidentiality — Absolute protection of client information."
+    }
+  },
+  "practiceAreas": {
+    "title": "Practice Areas",
+    "subtitle": "Diverse legal services meeting the needs of businesses and individuals.",
+    "learnMore": "Learn More"
+  },
+  "practiceDetail": {
+    "servicesTitle": "Key Services",
+    "contactCta": "Schedule a Consultation",
+    "backToList": "Back to list"
+  },
+  "team": {
+    "title": "Our Attorneys & Professionals",
+    "subtitle": "Experienced experts with deep knowledge of Vietnamese and international law.",
+    "experience": "Experience",
+    "specialty": "Practice Areas"
+  },
+  "news": {
+    "title": "News & Legal Insights",
+    "subtitle": "Analysis, updates, and practical legal knowledge.",
+    "readMore": "Read More",
+    "backToList": "Back to news",
+    "publishedOn": "Published"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "We are ready to listen and assist you.",
+    "address": "Address",
+    "phone": "Hotline",
+    "email": "Email",
+    "hours": "Business Hours",
+    "hoursValue": "Mon – Fri: 8:00 AM – 5:30 PM",
+    "formTitle": "Request a Consultation",
+    "formName": "Full Name",
+    "formEmail": "Email",
+    "formPhone": "Phone Number",
+    "formSubject": "Subject",
+    "formMessage": "Message",
+    "formSubmit": "Submit Request",
+    "formSuccess": "Thank you! We will contact you shortly.",
+    "mapTitle": "Office Location"
+  },
+  "footer": {
+    "description": "Minh An Law Firm — Professional legal advisory for businesses.",
+    "quickLinks": "Quick Links",
+    "contactInfo": "Contact Information",
+    "copyright": "© {year} Minh An Law Firm. All rights reserved."
+  },
+  "common": {
+    "demo": "Demo content — Can be replaced with actual company content."
+  }
+}

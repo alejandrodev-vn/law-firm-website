@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "siteName": "Công ty Luật ABC",
+    "tagline": "Tư vấn pháp lý chuyên nghiệp — Uy tín — Minh bạch"
+  },
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "practiceAreas": "Lĩnh vực hành nghề",
+    "team": "Đội ngũ",
+    "news": "Tin tức",
+    "contact": "Liên hệ"
+  },
+  "home": {
+    "heroTitle": "Đồng hành cùng doanh nghiệp trên hành trình phát triển bền vững",
+    "heroSubtitle": "Công ty Luật ABC cung cấp dịch vụ tư vấn pháp lý toàn diện cho doanh nghiệp trong nước và quốc tế, với đội ngũ luật sư giàu kinh nghiệm và am hiểu sâu sắc pháp luật Việt Nam.",
+    "ctaContact": "Liên hệ tư vấn",
+    "ctaPractice": "Lĩnh vực hành nghề",
+    "statsYears": "Năm kinh nghiệm",
+    "statsCases": "Vụ việc đã xử lý",
+    "statsClients": "Khách hàng doanh nghiệp",
+    "whyTitle": "Vì sao chọn Minh An?",
+    "whyItems": {
+      "expertise": {
+        "title": "Chuyên môn sâu",
+        "desc": "Đội ngũ luật sư am hiểu đa lĩnh vực, cập nhật liên tục thay đổi pháp luật."
+      },
+      "trust": {
+        "title": "Uy tín & bảo mật",
+        "desc": "Cam kết bảo mật thông tin khách hàng và xử lý vụ việc với sự nghiêm túc cao nhất."
+      },
+      "efficiency": {
+        "title": "Hiệu quả & rõ ràng",
+        "desc": "Quy trình làm việc minh bạch, báo cáo tiến độ định kỳ, tối ưu chi phí pháp lý."
+      }
+    },
+    "practiceTitle": "Lĩnh vực hành nghề",
+    "practiceSubtitle": "Chúng tôi hỗ trợ khách hàng trên nhiều lĩnh vực pháp lý quan trọng.",
+    "teamTitle": "Đội ngũ luật sư",
+    "teamSubtitle": "Những chuyên gia pháp lý tận tâm, sẵn sàng đồng hành cùng bạn.",
+    "newsTitle": "Tin tức & kiến thức pháp lý",
+    "newsSubtitle": "Cập nhật thông tin pháp luật mới nhất và phân tích chuyên sâu.",
+    "viewAll": "Xem tất cả",
+    "credentialsTitle": "Chứng nhận & thành viên",
+    "processTitle": "Quy trình làm việc",
+    "processSubtitle": "Quy trình rõ ràng, minh bạch — đảm bảo khách hàng luôn nắm được tiến độ và kết quả.",
+    "processSteps": {
+      "step1": {
+        "title": "Tiếp nhận & tư vấn sơ bộ",
+        "desc": "Lắng nghe nhu cầu, phân tích tình huống và đề xuất hướng xử lý phù hợp."
+      },
+      "step2": {
+        "title": "Phân tích pháp lý",
+        "desc": "Nghiên cứu văn bản, đánh giá rủi ro và xây dựng chiến lược chi tiết."
+      },
+      "step3": {
+        "title": "Triển khai giải pháp",
+        "desc": "Soạn thảo hồ sơ, đại diện thương lượng hoặc tranh tụng theo phương án đã thống nhất."
+      },
+      "step4": {
+        "title": "Theo dõi & hỗ trợ",
+        "desc": "Báo cáo kết quả, tư vấn hậu kỳ và hỗ trợ tuân thủ pháp luật lâu dài."
+      }
+    },
+    "testimonialsTitle": "Khách hàng nói gì về chúng tôi",
+    "testimonialsSubtitle": "Sự tin tưởng của doanh nghiệp là thước đo quan trọng nhất cho chất lượng dịch vụ.",
+    "ctaTitle": "Cần tư vấn pháp lý?",
+    "ctaSubtitle": "Liên hệ ngay để được đội ngũ luật sư hỗ trợ — tư vấn ban đầu miễn phí cho doanh nghiệp.",
+    "ctaButton": "Đặt lịch tư vấn"
+  },
+  "about": {
+    "title": "Giới thiệu công ty",
+    "subtitle": "Hơn 15 năm đồng hành cùng doanh nghiệp Việt Nam",
+    "intro": "Công ty Luật ABC được thành lập với sứ mệnh cung cấp dịch vụ tư vấn pháp lý chất lượng cao, giúp khách hàng giải quyết các vấn đề pháp lý một cách hiệu quả và an toàn. Chúng tôi tin rằng pháp luật là công cụ bảo vệ quyền lợi hợp pháp và thúc đẩy phát triển bền vững.",
+    "missionTitle": "Sứ mệnh",
+    "mission": "Cung cấp giải pháp pháp lý toàn diện, chính xác và kịp thời, góp phần xây dựng môi trường kinh doanh minh bạch và tuân thủ pháp luật.",
+    "visionTitle": "Tầm nhìn",
+    "vision": "Trở thành công ty luật hàng đầu tại Việt Nam, được tin tưởng bởi các doanh nghiệp trong và ngoài nước.",
+    "historyTitle": "Lịch sử hình thành",
+    "history": "Từ năm 2010, Công ty Luật ABC đã không ngừng mở rộng đội ngũ và nâng cao chất lượng dịch vụ. Hiện chúng tôi phục vụ hơn 200 doanh nghiệp trong nước và quốc tế tại các lĩnh vực doanh nghiệp, lao động, bất động sản và sở hữu trí tuệ.",
+    "valuesTitle": "Giá trị cốt lõi",
+    "values": {
+      "integrity": "Chính trực — Hành xử đúng đắn, trung thực trong mọi tình huống.",
+      "professionalism": "Chuyên nghiệp — Nâng cao năng lực, tuân thủ chuẩn mực nghề nghiệp.",
+      "dedication": "Tận tâm — Đặt lợi ích khách hàng lên hàng đầu.",
+      "confidentiality": "Bảo mật — Bảo vệ tuyệt đối thông tin khách hàng."
+    }
+  },
+  "practiceAreas": {
+    "title": "Lĩnh vực hành nghề",
+    "subtitle": "Dịch vụ pháp lý đa dạng, đáp ứng nhu cầu của doanh nghiệp và cá nhân.",
+    "learnMore": "Tìm hiểu thêm"
+  },
+  "practiceDetail": {
+    "servicesTitle": "Dịch vụ chính",
+    "contactCta": "Đặt lịch tư vấn",
+    "backToList": "Quay lại danh sách"
+  },
+  "team": {
+    "title": "Đội ngũ luật sư & chuyên viên",
+    "subtitle": "Đội ngũ chuyên gia giàu kinh nghiệm, am hiểu sâu sắc pháp luật Việt Nam và quốc tế.",
+    "experience": "Kinh nghiệm",
+    "specialty": "Lĩnh vực phụ trách"
+  },
+  "news": {
+    "title": "Tin tức & kiến thức pháp lý",
+    "subtitle": "Phân tích, cập nhật và chia sẻ kiến thức pháp lý hữu ích.",
+    "readMore": "Đọc tiếp",
+    "backToList": "Quay lại tin tức",
+    "publishedOn": "Ngày đăng"
+  },
+  "contact": {
+    "title": "Liên hệ",
+    "subtitle": "Chúng tôi sẵn sàng lắng nghe và hỗ trợ bạn.",
+    "address": "Địa chỉ",
+    "phone": "Hotline",
+    "email": "Email",
+    "hours": "Giờ làm việc",
+    "hoursValue": "Thứ 2 – Thứ 6: 8:00 – 17:30",
+    "formTitle": "Gửi yêu cầu tư vấn",
+    "formName": "Họ và tên",
+    "formEmail": "Email",
+    "formPhone": "Số điện thoại",
+    "formSubject": "Chủ đề",
+    "formMessage": "Nội dung",
+    "formSubmit": "Gửi yêu cầu",
+    "formSuccess": "Cảm ơn bạn! Chúng tôi sẽ liên hệ trong thời gian sớm nhất.",
+    "mapTitle": "Vị trí văn phòng"
+  },
+  "footer": {
+    "description": "Công ty Luật ABC — Tư vấn pháp lý chuyên nghiệp cho doanh nghiệp.",
+    "quickLinks": "Liên kết nhanh",
+    "contactInfo": "Thông tin liên hệ",
+    "copyright": "© {year} Công ty Luật ABC. Bảo lưu mọi quyền."
+  },
+  "common": {
+    "demo": "Nội dung demo — Có thể thay thế bằng nội dung thực tế của công ty."
+  }
+}

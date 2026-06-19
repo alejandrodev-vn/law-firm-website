@@ -1,0 +1,139 @@
+{
+  "meta": {
+    "siteName": "明安律师事务所",
+    "tagline": "专业法律咨询 — 诚信 — 透明"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于我们",
+    "practiceAreas": "业务领域",
+    "team": "律师团队",
+    "news": "新闻资讯",
+    "contact": "联系我们"
+  },
+  "home": {
+    "heroTitle": "陪伴企业走向可持续发展之路",
+    "heroSubtitle": "明安律师事务所为国内外企业提供全面的法律咨询服务，拥有经验丰富、深谙越南法律的律师团队。",
+    "ctaContact": "联系咨询",
+    "ctaPractice": "业务领域",
+    "statsYears": "年执业经验",
+    "statsCases": "已处理案件",
+    "statsClients": "企业客户",
+    "whyTitle": "为何选择明安？",
+    "whyItems": {
+      "expertise": {
+        "title": "专业精深",
+        "desc": "律师团队精通多个法律领域，持续跟进法律法规的最新变化。"
+      },
+      "trust": {
+        "title": "信誉与保密",
+        "desc": "严格保护客户信息，以最高专业水准处理每一项法律事务。"
+      },
+      "efficiency": {
+        "title": "高效透明",
+        "desc": "工作流程清晰，定期汇报进展，优化法律成本。"
+      }
+    },
+    "practiceTitle": "业务领域",
+    "practiceSubtitle": "我们在多个重要法律领域为客户提供支持。",
+    "teamTitle": "律师团队",
+    "teamSubtitle": "敬业的专业法律人士，随时为您提供帮助。",
+    "newsTitle": "新闻与法律知识",
+    "newsSubtitle": "最新法律动态与深度分析。",
+    "viewAll": "查看全部",
+    "credentialsTitle": "资质认证与会员资格",
+    "processTitle": "服务流程",
+    "processSubtitle": "流程清晰透明，确保客户随时了解进展与结果。",
+    "processSteps": {
+      "step1": {
+        "title": "初步咨询",
+        "desc": "了解需求，分析情况，提出合适的处理方向。"
+      },
+      "step2": {
+        "title": "法律分析",
+        "desc": "研究法规，评估风险，制定详细策略。"
+      },
+      "step3": {
+        "title": "方案执行",
+        "desc": "起草文件，按既定方案进行谈判或诉讼代理。"
+      },
+      "step4": {
+        "title": "跟踪支持",
+        "desc": "汇报结果，提供后续咨询及长期合规支持。"
+      }
+    },
+    "testimonialsTitle": "客户评价",
+    "testimonialsSubtitle": "企业的信任是衡量我们服务质量最重要的标准。",
+    "ctaTitle": "需要法律咨询？",
+    "ctaSubtitle": "立即联系我们，企业客户可享受免费初步咨询。",
+    "ctaButton": "预约咨询"
+  },
+  "about": {
+    "title": "关于我们",
+    "subtitle": "陪伴越南企业发展超过15年",
+    "intro": "明安律师事务所的成立宗旨是提供高质量的法律咨询服务，帮助客户高效、安全地解决法律问题。我们坚信法律是保护合法权益、促进可持续发展的重要工具。",
+    "missionTitle": "使命",
+    "mission": "提供全面、准确、及时的法律解决方案，助力构建透明合规的商业环境。",
+    "visionTitle": "愿景",
+    "vision": "成为越南领先的律师事务所，赢得国内外企业的信赖。",
+    "historyTitle": "发展历程",
+    "history": "自2010年成立以来，明安律师事务所不断扩充团队、提升服务质量。目前我们为超过200家国内外企业提供公司法、劳动法、房地产及知识产权等领域的法律服务。",
+    "valuesTitle": "核心价值观",
+    "values": {
+      "integrity": "正直 — 在任何情况下都秉持诚实与公正。",
+      "professionalism": "专业 — 不断提升能力，恪守职业规范。",
+      "dedication": "敬业 — 将客户利益置于首位。",
+      "confidentiality": "保密 — 绝对保护客户信息。"
+    }
+  },
+  "practiceAreas": {
+    "title": "业务领域",
+    "subtitle": "多元化的法律服务，满足企业和个人的需求。",
+    "learnMore": "了解更多"
+  },
+  "practiceDetail": {
+    "servicesTitle": "主要服务",
+    "contactCta": "预约咨询",
+    "backToList": "返回列表"
+  },
+  "team": {
+    "title": "律师与专业人员",
+    "subtitle": "经验丰富的专家团队，深谙越南及国际法律。",
+    "experience": "执业经验",
+    "specialty": "负责领域"
+  },
+  "news": {
+    "title": "新闻与法律知识",
+    "subtitle": "法律分析、动态更新与实用知识分享。",
+    "readMore": "阅读更多",
+    "backToList": "返回新闻",
+    "publishedOn": "发布日期"
+  },
+  "contact": {
+    "title": "联系我们",
+    "subtitle": "我们随时准备倾听并为您提供帮助。",
+    "address": "地址",
+    "phone": "热线电话",
+    "email": "电子邮箱",
+    "hours": "工作时间",
+    "hoursValue": "周一至周五：8:00 – 17:30",
+    "formTitle": "提交咨询请求",
+    "formName": "姓名",
+    "formEmail": "电子邮箱",
+    "formPhone": "电话号码",
+    "formSubject": "主题",
+    "formMessage": "内容",
+    "formSubmit": "提交请求",
+    "formSuccess": "感谢您的咨询！我们将尽快与您联系。",
+    "mapTitle": "办公地点"
+  },
+  "footer": {
+    "description": "明安律师事务所 — 为企业提供专业的法律咨询服务。",
+    "quickLinks": "快速链接",
+    "contactInfo": "联系信息",
+    "copyright": "© {year} 明安律师事务所。保留所有权利。"
+  },
+  "common": {
+    "demo": "演示内容 — 可替换为公司的实际内容。"
+  }
+}
