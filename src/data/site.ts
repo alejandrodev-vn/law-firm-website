@@ -6,7 +6,7 @@ export const siteConfig = {
   },
   slogan: "BEYOND LAW. BESIDE YOU.",
   logo: "/images/sophys-logo.png",
-  logoTransparent: "/images/sophys-logo-transparent.png",
+  logoTransparent: "/images/sophys_law_firm_transparent.png",
   phone: "0937.868.393",
   phoneTel: "+84937868393",
   email: "",
