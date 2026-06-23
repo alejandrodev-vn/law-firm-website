@@ -23,11 +23,11 @@ export default function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 lg:grid-cols-3 lg:px-8">
         <div>
           <Image
-            src={siteConfig.logo}
+            src={siteConfig.logoTransparent}
             alt="SOPHYS"
             width={120}
             height={87}
-            className="mb-4 h-12 w-auto object-contain brightness-0 invert"
+            className="mb-4 h-12 w-auto object-contain"
           />
           <p className="text-sm leading-relaxed text-cream/70">{t("description")}</p>
           <p className="mt-3 text-sm leading-relaxed text-cream/60">
