@@ -50,8 +50,8 @@ function ContactContent() {
                     {t("phone")}
                   </h3>
                   <a
-                    href={`tel:${siteConfig.phone}`}
-                    className="mt-2 block text-sm text-navy hover:text-gold"
+                    href={`tel:${siteConfig.phoneTel}`}
+                    className="mt-2 block text-lg font-medium text-navy hover:text-gold"
                   >
                     {siteConfig.phone}
                   </a>
@@ -60,12 +60,16 @@ function ContactContent() {
                   <h3 className="text-xs font-semibold tracking-wider text-charcoal/50 uppercase">
                     {t("email")}
                   </h3>
-                  <a
-                    href={`mailto:${siteConfig.email}`}
-                    className="mt-2 block text-sm text-navy hover:text-gold"
-                  >
-                    {siteConfig.email}
-                  </a>
+                  {siteConfig.email ? (
+                    <a
+                      href={`mailto:${siteConfig.email}`}
+                      className="mt-2 block text-sm text-navy hover:text-gold"
+                    >
+                      {siteConfig.email}
+                    </a>
+                  ) : (
+                    <p className="mt-2 text-sm text-charcoal/50">{t("updating")}</p>
+                  )}
                 </div>
                 <div>
                   <h3 className="text-xs font-semibold tracking-wider text-charcoal/50 uppercase">

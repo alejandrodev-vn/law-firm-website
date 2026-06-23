@@ -1,15 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
+import { siteConfig } from "@/data/site";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const navItems = [
   { key: "home", href: "/" },
   { key: "about", href: "/about" },
   { key: "practiceAreas", href: "/practice-areas" },
-  { key: "team", href: "/team" },
   { key: "news", href: "/news" },
   { key: "contact", href: "/contact" },
 ] as const;
@@ -27,14 +28,24 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-cream-dark bg-navy text-cream">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 lg:px-8">
-        <Link href="/" className="group">
-          <span className="font-display text-xl font-semibold tracking-tight text-cream lg:text-2xl">
-            {tMeta("siteName")}
-          </span>
-          <span className="mt-0.5 block text-xs tracking-widest text-gold-light uppercase">
-            Law Firm
-          </span>
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 lg:px-8">
+        <Link href="/" className="group flex items-center gap-3">
+          <Image
+            src={siteConfig.logo}
+            alt={tMeta("siteName")}
+            width={48}
+            height={35}
+            className="h-9 w-auto object-contain"
+            priority
+          />
+          <div className="hidden sm:block">
+            <span className="font-display text-sm font-semibold tracking-tight text-cream lg:text-base">
+              {tMeta("siteName")}
+            </span>
+            <span className="mt-0.5 block text-[10px] tracking-widest text-gold-light uppercase">
+              {tMeta("tagline")}
+            </span>
+          </div>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">

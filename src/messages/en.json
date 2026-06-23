@@ -1,106 +1,76 @@
 {
   "meta": {
-    "siteName": "Minh An Law Firm",
-    "tagline": "Professional Legal Counsel — Integrity — Transparency"
+    "siteName": "SOPHYS LAW FIRM",
+    "siteNameFull": "SOPHYS LAW FIRM",
+    "tagline": "BEYOND LAW. BESIDE YOU."
   },
   "nav": {
     "home": "Home",
     "about": "About",
     "practiceAreas": "Practice Areas",
-    "team": "Our Team",
     "news": "News",
     "contact": "Contact"
   },
   "home": {
-    "heroTitle": "Partnering with businesses on their path to sustainable growth",
-    "heroSubtitle": "Minh An Law Firm provides comprehensive legal advisory services for domestic and international enterprises, backed by experienced attorneys with deep knowledge of Vietnamese law.",
+    "heroTitle": "Beyond Law. Beside You.",
+    "heroSubtitle": "SOPHYS LAW FIRM provides legal advisory, non-litigation representation, and dispute resolution for individuals, businesses, and domestic and international investors.",
     "ctaContact": "Contact Us",
     "ctaPractice": "Practice Areas",
-    "statsYears": "Years of Experience",
-    "statsCases": "Cases Handled",
-    "statsClients": "Corporate Clients",
-    "whyTitle": "Why Choose Minh An?",
-    "whyItems": {
-      "expertise": {
-        "title": "Deep Expertise",
-        "desc": "Attorneys skilled across multiple practice areas, continuously updated on legal developments."
-      },
-      "trust": {
-        "title": "Integrity & Confidentiality",
-        "desc": "Committed to client confidentiality and handling every matter with the utmost professionalism."
-      },
-      "efficiency": {
-        "title": "Efficient & Transparent",
-        "desc": "Clear workflows, regular progress reports, and optimized legal costs."
-      }
-    },
+    "philosophyTitle": "Our Philosophy",
+    "beyondLawTitle": "BEYOND LAW",
+    "beyondLawDesc": "We understand that every legal matter is connected to business operations, investment decisions, and development goals. SOPHYS examines legal issues not only through regulations but within the context of operations, objectives, and growth direction — delivering practical, effective, and sustainable solutions.",
+    "besideYouTitle": "BESIDE YOU",
+    "besideYouDesc": "We believe a great lawyer is not just an advisor, but a trusted partner. SOPHYS stands beside clients at every stage — from important business decisions to difficult times, crises, or disputes.",
     "practiceTitle": "Practice Areas",
-    "practiceSubtitle": "We support clients across key areas of law.",
-    "teamTitle": "Our Attorneys",
-    "teamSubtitle": "Dedicated legal professionals ready to assist you.",
+    "practiceSubtitle": "Comprehensive legal services for businesses, investors, and individuals.",
+    "clientsTitle": "Our Clients",
+    "clientsSubtitle": "SOPHYS serves businesses, investors, organizations, and individuals in investment, business operations, and protecting legitimate rights in Vietnam.",
     "newsTitle": "News & Legal Insights",
-    "newsSubtitle": "Latest legal updates and in-depth analysis.",
+    "newsSubtitle": "Legal analysis and updates in FDI, customs, projects, and corporate law.",
     "viewAll": "View All",
-    "credentialsTitle": "Certifications & Memberships",
+    "keywordsTitle": "Areas of Expertise",
     "processTitle": "Our Process",
     "processSubtitle": "A clear, transparent workflow — ensuring clients always understand progress and outcomes.",
     "processSteps": {
-      "step1": {
-        "title": "Initial Consultation",
-        "desc": "Listen to your needs, analyze the situation, and propose an appropriate approach."
-      },
-      "step2": {
-        "title": "Legal Analysis",
-        "desc": "Research regulations, assess risks, and develop a detailed strategy."
-      },
-      "step3": {
-        "title": "Implementation",
-        "desc": "Draft documents, represent in negotiations or litigation per the agreed plan."
-      },
-      "step4": {
-        "title": "Follow-up & Support",
-        "desc": "Report results, provide post-matter advisory, and support long-term compliance."
-      }
+      "step1": { "title": "Initial Consultation", "desc": "Listen to your needs, analyze the situation, and propose an appropriate approach." },
+      "step2": { "title": "Legal Analysis", "desc": "Research regulations, assess risks, and develop a detailed strategy." },
+      "step3": { "title": "Implementation", "desc": "Draft documents, represent in negotiations or litigation per the agreed plan." },
+      "step4": { "title": "Follow-up & Support", "desc": "Report results, provide post-matter advisory, and long-term legal partnership." }
     },
-    "testimonialsTitle": "What Our Clients Say",
-    "testimonialsSubtitle": "The trust of businesses is our most important measure of service quality.",
     "ctaTitle": "Need Legal Advice?",
-    "ctaSubtitle": "Contact us today — initial consultation is complimentary for businesses.",
-    "ctaButton": "Schedule a Consultation"
+    "ctaSubtitle": "Contact SOPHYS LAW FIRM — we are ready to partner with you.",
+    "ctaButton": "Contact Us"
   },
   "about": {
-    "title": "About Us",
-    "subtitle": "Over 15 years partnering with Vietnamese businesses",
-    "intro": "Minh An Law Firm was founded with the mission of providing high-quality legal advisory services, helping clients resolve legal matters efficiently and safely. We believe law is a tool to protect legitimate rights and promote sustainable development.",
-    "missionTitle": "Mission",
-    "mission": "To deliver comprehensive, accurate, and timely legal solutions that contribute to a transparent and compliant business environment.",
-    "visionTitle": "Vision",
-    "vision": "To become a leading law firm in Vietnam, trusted by domestic and international enterprises.",
-    "historyTitle": "Our History",
-    "history": "Since 2010, Minh An Law Firm has continuously expanded its team and elevated service quality. We now serve over 200 domestic and international businesses across corporate, labor, real estate, and intellectual property law.",
+    "title": "About SOPHYS LAW FIRM",
+    "subtitle": "BEYOND LAW. BESIDE YOU.",
+    "intro": "SOPHYS LAW FIRM is a law firm providing legal advisory, non-litigation representation, and dispute resolution for individuals, businesses, and domestic and international investors.",
+    "scope": "We partner with clients throughout the entire business lifecycle — from investment and company formation, internal governance, commercial transactions, and project implementation to dispute resolution and protection of legitimate rights.",
+    "commitment": "With the motto \"BEYOND LAW. BESIDE YOU.\", SOPHYS not only provides legal solutions but becomes a trusted partner, helping clients manage risks, protect interests, and achieve sustainable growth.",
+    "beyondLawTitle": "BEYOND LAW",
+    "beyondLawDesc": "We understand that every legal matter is connected to business operations, investment decisions, and development goals. We go beyond legal opinions to partner in risk management, project implementation, dispute resolution, and building practical, effective, and sustainable solutions.",
+    "besideYouTitle": "BESIDE YOU",
+    "besideYouDesc": "We believe a great lawyer is not just an advisor, but a trusted partner. We stand beside clients at every stage, listening, understanding, and protecting legitimate interests with the highest sense of responsibility.",
     "valuesTitle": "Core Values",
+    "valuesSubtitle": "PARTNERSHIP · INTEGRITY · SYNERGY",
+    "valuesDesc": "We build long-term partnerships with clients on the foundation of integrity, responsibility, and solid expertise, creating synergies to effectively resolve legal and business challenges.",
     "values": {
-      "integrity": "Integrity — Acting honestly and ethically in every situation.",
-      "professionalism": "Professionalism — Upholding the highest standards of legal practice.",
-      "dedication": "Dedication — Placing client interests at the forefront.",
-      "confidentiality": "Confidentiality — Absolute protection of client information."
-    }
+      "partnership": "PARTNERSHIP — Long-term partnership, placing client interests first.",
+      "integrity": "INTEGRITY — Honesty, ethics, and professional standards.",
+      "synergy": "SYNERGY — Effective collaboration, creating value beyond individual solutions."
+    },
+    "clientsTitle": "Our Clients",
+    "clientsClosing": "SOPHYS strives to be a trusted legal partner, accompanying clients in risk management, problem-solving, and sustainable development."
   },
   "practiceAreas": {
     "title": "Practice Areas",
-    "subtitle": "Diverse legal services meeting the needs of businesses and individuals.",
+    "subtitle": "Diverse legal services meeting the needs of businesses, investors, and individuals.",
     "learnMore": "Learn More"
   },
   "practiceDetail": {
     "servicesTitle": "Key Services",
-    "contactCta": "Schedule a Consultation",
+    "contactCta": "Contact Us",
     "backToList": "Back to list"
-  },
-  "team": {
-    "title": "Our Attorneys & Professionals",
-    "subtitle": "Experienced experts with deep knowledge of Vietnamese and international law.",
-    "experience": "Experience",
-    "specialty": "Practice Areas"
   },
   "news": {
     "title": "News & Legal Insights",
@@ -125,15 +95,13 @@
     "formMessage": "Message",
     "formSubmit": "Submit Request",
     "formSuccess": "Thank you! We will contact you shortly.",
-    "mapTitle": "Office Location"
+    "mapTitle": "Office Location",
+    "updating": "Coming soon"
   },
   "footer": {
-    "description": "Minh An Law Firm — Professional legal advisory for businesses.",
+    "description": "SOPHYS LAW FIRM — BEYOND LAW. BESIDE YOU.",
     "quickLinks": "Quick Links",
     "contactInfo": "Contact Information",
-    "copyright": "© {year} Minh An Law Firm. All rights reserved."
-  },
-  "common": {
-    "demo": "Demo content — Can be replaced with actual company content."
+    "copyright": "© {year} SOPHYS LAW FIRM. All rights reserved."
   }
 }

@@ -1,106 +1,76 @@
 {
   "meta": {
-    "siteName": "明安律师事务所",
-    "tagline": "专业法律咨询 — 诚信 — 透明"
+    "siteName": "SOPHYS律师事务所",
+    "siteNameFull": "SOPHYS律师事务所",
+    "tagline": "BEYOND LAW. BESIDE YOU."
   },
   "nav": {
     "home": "首页",
     "about": "关于我们",
     "practiceAreas": "业务领域",
-    "team": "律师团队",
     "news": "新闻资讯",
     "contact": "联系我们"
   },
   "home": {
-    "heroTitle": "陪伴企业走向可持续发展之路",
-    "heroSubtitle": "明安律师事务所为国内外企业提供全面的法律咨询服务，拥有经验丰富、深谙越南法律的律师团队。",
+    "heroTitle": "超越法律。陪伴您。",
+    "heroSubtitle": "SOPHYS律师事务所为个人、企业、国内外投资者提供法律咨询、非诉讼代理及争议解决服务。",
     "ctaContact": "联系咨询",
     "ctaPractice": "业务领域",
-    "statsYears": "年执业经验",
-    "statsCases": "已处理案件",
-    "statsClients": "企业客户",
-    "whyTitle": "为何选择明安？",
-    "whyItems": {
-      "expertise": {
-        "title": "专业精深",
-        "desc": "律师团队精通多个法律领域，持续跟进法律法规的最新变化。"
-      },
-      "trust": {
-        "title": "信誉与保密",
-        "desc": "严格保护客户信息，以最高专业水准处理每一项法律事务。"
-      },
-      "efficiency": {
-        "title": "高效透明",
-        "desc": "工作流程清晰，定期汇报进展，优化法律成本。"
-      }
-    },
+    "philosophyTitle": "执业理念",
+    "beyondLawTitle": "BEYOND LAW",
+    "beyondLawDesc": "我们深知每一个法律问题都与经营活动、投资决策和发展目标紧密相连。SOPHYS不仅从法规角度审视法律问题，更结合运营背景、目标和方向——提供切合实际、高效且可持续的解决方案。",
+    "besideYouTitle": "BESIDE YOU",
+    "besideYouDesc": "我们相信优秀的律师不仅是顾问，更是值得信赖的伙伴。SOPHYS在每个阶段都与客户并肩——从重要商业决策到困难、危机或争议时刻。",
     "practiceTitle": "业务领域",
-    "practiceSubtitle": "我们在多个重要法律领域为客户提供支持。",
-    "teamTitle": "律师团队",
-    "teamSubtitle": "敬业的专业法律人士，随时为您提供帮助。",
+    "practiceSubtitle": "为企业和投资者提供全面的法律服务。",
+    "clientsTitle": "服务对象",
+    "clientsSubtitle": "SOPHYS为在越南投资、经营及保护合法权益的企业、投资者、组织和个人提供法律服务。",
     "newsTitle": "新闻与法律知识",
-    "newsSubtitle": "最新法律动态与深度分析。",
+    "newsSubtitle": "FDI、海关、项目及企业领域的法律分析与动态。",
     "viewAll": "查看全部",
-    "credentialsTitle": "资质认证与会员资格",
+    "keywordsTitle": "专业领域",
     "processTitle": "服务流程",
     "processSubtitle": "流程清晰透明，确保客户随时了解进展与结果。",
     "processSteps": {
-      "step1": {
-        "title": "初步咨询",
-        "desc": "了解需求，分析情况，提出合适的处理方向。"
-      },
-      "step2": {
-        "title": "法律分析",
-        "desc": "研究法规，评估风险，制定详细策略。"
-      },
-      "step3": {
-        "title": "方案执行",
-        "desc": "起草文件，按既定方案进行谈判或诉讼代理。"
-      },
-      "step4": {
-        "title": "跟踪支持",
-        "desc": "汇报结果，提供后续咨询及长期合规支持。"
-      }
+      "step1": { "title": "初步咨询", "desc": "了解需求，分析情况，提出合适的处理方向。" },
+      "step2": { "title": "法律分析", "desc": "研究法规，评估风险，制定详细策略。" },
+      "step3": { "title": "方案执行", "desc": "起草文件，按既定方案进行谈判或诉讼代理。" },
+      "step4": { "title": "跟踪支持", "desc": "汇报结果，提供后续咨询及长期法律陪伴。" }
     },
-    "testimonialsTitle": "客户评价",
-    "testimonialsSubtitle": "企业的信任是衡量我们服务质量最重要的标准。",
     "ctaTitle": "需要法律咨询？",
-    "ctaSubtitle": "立即联系我们，企业客户可享受免费初步咨询。",
-    "ctaButton": "预约咨询"
+    "ctaSubtitle": "联系SOPHYS律师事务所——我们随时准备与您同行。",
+    "ctaButton": "立即联系"
   },
   "about": {
-    "title": "关于我们",
-    "subtitle": "陪伴越南企业发展超过15年",
-    "intro": "明安律师事务所的成立宗旨是提供高质量的法律咨询服务，帮助客户高效、安全地解决法律问题。我们坚信法律是保护合法权益、促进可持续发展的重要工具。",
-    "missionTitle": "使命",
-    "mission": "提供全面、准确、及时的法律解决方案，助力构建透明合规的商业环境。",
-    "visionTitle": "愿景",
-    "vision": "成为越南领先的律师事务所，赢得国内外企业的信赖。",
-    "historyTitle": "发展历程",
-    "history": "自2010年成立以来，明安律师事务所不断扩充团队、提升服务质量。目前我们为超过200家国内外企业提供公司法、劳动法、房地产及知识产权等领域的法律服务。",
+    "title": "关于SOPHYS律师事务所",
+    "subtitle": "BEYOND LAW. BESIDE YOU.",
+    "intro": "SOPHYS律师事务所是一家为个人、企业、国内外投资者提供法律咨询、非诉讼代理及争议解决服务的律师事务所。",
+    "scope": "我们在企业全生命周期中与客户同行——从投资、设立企业、内部治理、商业交易、项目实施到争议解决和权益保护。",
+    "commitment": "秉承「BEYOND LAW. BESIDE YOU.」的理念，SOPHYS不仅提供法律解决方案，更成为值得信赖的合作伙伴，帮助客户管理风险、保护利益、实现可持续发展。",
+    "beyondLawTitle": "BEYOND LAW",
+    "beyondLawDesc": "我们深知每一个法律问题都与经营活动、投资决策和发展目标紧密相连。我们超越法律意见，在风险管理、项目实施、争议解决中与客户同行，构建切实、高效、可持续的解决方案。",
+    "besideYouTitle": "BESIDE YOU",
+    "besideYouDesc": "我们相信优秀的律师不仅是顾问，更是值得信赖的伙伴。我们在每个发展阶段与客户并肩，倾听、理解并以最高的责任感保护合法权益。",
     "valuesTitle": "核心价值观",
+    "valuesSubtitle": "PARTNERSHIP · INTEGRITY · SYNERGY",
+    "valuesDesc": "我们在正直、责任和扎实专业的基础上与客户建立长期伙伴关系，形成协同力量，有效化解法律和商业挑战。",
     "values": {
-      "integrity": "正直 — 在任何情况下都秉持诚实与公正。",
-      "professionalism": "专业 — 不断提升能力，恪守职业规范。",
-      "dedication": "敬业 — 将客户利益置于首位。",
-      "confidentiality": "保密 — 绝对保护客户信息。"
-    }
+      "partnership": "PARTNERSHIP — 长期陪伴，将客户利益置于首位。",
+      "integrity": "INTEGRITY — 正直诚信，恪守职业规范。",
+      "synergy": "SYNERGY — 高效协作，创造超越单一方案的价值。"
+    },
+    "clientsTitle": "服务对象",
+    "clientsClosing": "SOPHYS致力于成为值得信赖的法律合作伙伴，在风险管理、问题解决和可持续发展中与客户同行。"
   },
   "practiceAreas": {
     "title": "业务领域",
-    "subtitle": "多元化的法律服务，满足企业和个人的需求。",
+    "subtitle": "多元化的法律服务，满足企业、投资者和个人的需求。",
     "learnMore": "了解更多"
   },
   "practiceDetail": {
     "servicesTitle": "主要服务",
-    "contactCta": "预约咨询",
+    "contactCta": "联系咨询",
     "backToList": "返回列表"
-  },
-  "team": {
-    "title": "律师与专业人员",
-    "subtitle": "经验丰富的专家团队，深谙越南及国际法律。",
-    "experience": "执业经验",
-    "specialty": "负责领域"
   },
   "news": {
     "title": "新闻与法律知识",
@@ -125,15 +95,13 @@
     "formMessage": "内容",
     "formSubmit": "提交请求",
     "formSuccess": "感谢您的咨询！我们将尽快与您联系。",
-    "mapTitle": "办公地点"
+    "mapTitle": "办公地点",
+    "updating": "更新中"
   },
   "footer": {
-    "description": "明安律师事务所 — 为企业提供专业的法律咨询服务。",
+    "description": "SOPHYS律师事务所 — BEYOND LAW. BESIDE YOU.",
     "quickLinks": "快速链接",
     "contactInfo": "联系信息",
-    "copyright": "© {year} 明安律师事务所。保留所有权利。"
-  },
-  "common": {
-    "demo": "演示内容 — 可替换为公司的实际内容。"
+    "copyright": "© {year} SOPHYS律师事务所。保留所有权利。"
   }
 }

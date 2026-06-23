@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import PageHeader from "@/components/PageHeader";
 import CredentialsBar from "@/components/CredentialsBar";
+import ClientsSection from "@/components/ClientsSection";
 import CtaBanner from "@/components/CtaBanner";
 import type { Locale } from "@/i18n/routing";
 
@@ -20,7 +21,7 @@ export default async function AboutPage({ params }: Props) {
 function AboutContent({ locale }: { locale: Locale }) {
   const t = useTranslations("about");
   const tHome = useTranslations("home");
-  const valueKeys = ["integrity", "professionalism", "dedication", "confidentiality"] as const;
+  const valueKeys = ["partnership", "integrity", "synergy"] as const;
 
   return (
     <>
@@ -37,49 +38,53 @@ function AboutContent({ locale }: { locale: Locale }) {
                 sizes="(max-width: 1024px) 100vw, 50vw"
               />
             </div>
-            <div>
+            <div className="space-y-6">
               <p className="text-base leading-relaxed text-charcoal/80 md:text-lg">
                 {t("intro")}
               </p>
-              <div className="mt-8 border-l-2 border-gold pl-6">
-                <h2 className="font-display text-lg font-semibold text-navy">
-                  {t("historyTitle")}
-                </h2>
-                <p className="mt-3 text-sm leading-relaxed text-charcoal/70">
-                  {t("history")}
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-16 grid gap-12 md:grid-cols-2">
-            <div className="border-l-2 border-gold pl-6">
-              <h2 className="font-display text-xl font-semibold text-navy">
-                {t("missionTitle")}
-              </h2>
-              <p className="mt-4 text-sm leading-relaxed text-charcoal/70">
-                {t("mission")}
+              <p className="text-sm leading-relaxed text-charcoal/70">
+                {t("scope")}
               </p>
-            </div>
-            <div className="border-l-2 border-gold pl-6">
-              <h2 className="font-display text-xl font-semibold text-navy">
-                {t("visionTitle")}
-              </h2>
-              <p className="mt-4 text-sm leading-relaxed text-charcoal/70">
-                {t("vision")}
+              <p className="border-l-2 border-gold pl-6 text-sm leading-relaxed text-charcoal/70">
+                {t("commitment")}
               </p>
             </div>
           </div>
 
-          <div className="mt-16">
+          <div className="mt-16 grid gap-8 md:grid-cols-2">
+            <div className="border-t-2 border-gold bg-white p-8">
+              <p className="text-xs font-semibold tracking-[0.2em] text-gold uppercase">
+                {t("beyondLawTitle")}
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-charcoal/80">
+                {t("beyondLawDesc")}
+              </p>
+            </div>
+            <div className="border-t-2 border-navy bg-navy p-8 text-cream">
+              <p className="text-xs font-semibold tracking-[0.2em] text-gold-light uppercase">
+                {t("besideYouTitle")}
+              </p>
+              <p className="mt-4 text-sm leading-relaxed text-cream/80">
+                {t("besideYouDesc")}
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-16 text-center">
             <h2 className="font-display text-2xl font-semibold text-navy">
               {t("valuesTitle")}
             </h2>
-            <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            <p className="mt-2 text-sm tracking-widest text-gold uppercase">
+              {t("valuesSubtitle")}
+            </p>
+            <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-charcoal/70">
+              {t("valuesDesc")}
+            </p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-3">
               {valueKeys.map((key) => (
                 <div
                   key={key}
-                  className="border border-cream-dark bg-white p-6"
+                  className="border border-cream-dark bg-white p-6 text-left"
                 >
                   <p className="text-sm leading-relaxed text-charcoal/80">
                     {t(`values.${key}`)}
@@ -91,7 +96,14 @@ function AboutContent({ locale }: { locale: Locale }) {
         </div>
       </section>
 
-      <CredentialsBar locale={locale} title={tHome("credentialsTitle")} />
+      <ClientsSection
+        locale={locale}
+        title={t("clientsTitle")}
+        subtitle={tHome("clientsSubtitle")}
+        closing={t("clientsClosing")}
+      />
+
+      <CredentialsBar locale={locale} title={tHome("keywordsTitle")} />
 
       <CtaBanner
         title={tHome("ctaTitle")}

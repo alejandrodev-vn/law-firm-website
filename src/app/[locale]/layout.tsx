@@ -41,10 +41,10 @@ export async function generateMetadata({
 
   return {
     title: {
-      default: messages.meta.siteName,
+      default: `${messages.meta.siteName} — ${messages.meta.tagline}`,
       template: `%s | ${messages.meta.siteName}`,
     },
-    description: messages.meta.tagline,
+    description: messages.home.heroSubtitle,
     openGraph: {
       title: messages.meta.siteName,
       description: messages.meta.tagline,
