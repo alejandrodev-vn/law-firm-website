@@ -29,23 +29,18 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-cream-dark bg-navy text-cream">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 lg:px-8">
-        <Link href="/" className="group flex items-center gap-3">
+        <Link href="/" className="group flex items-center gap-4">
           <Image
             src={siteConfig.logo}
             alt={tMeta("siteName")}
-            width={48}
-            height={35}
-            className="h-9 w-auto object-contain"
+            width={160}
+            height={116}
+            className="h-14 w-auto object-contain sm:h-16 lg:h-[4.5rem]"
             priority
           />
-          <div className="hidden sm:block">
-            <span className="font-display text-sm font-semibold tracking-tight text-cream lg:text-base">
-              {tMeta("siteName")}
-            </span>
-            <span className="mt-0.5 block text-[10px] tracking-widest text-gold-light uppercase">
-              {tMeta("tagline")}
-            </span>
-          </div>
+          <span className="hidden border-l border-cream/20 pl-4 text-[11px] leading-relaxed tracking-[0.2em] text-gold-light uppercase md:block">
+            {tMeta("tagline")}
+          </span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex">
