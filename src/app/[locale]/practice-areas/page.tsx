@@ -22,9 +22,9 @@ function PracticeAreasContent({ locale }: { locale: Locale }) {
   return (
     <>
       <PageHeader title={t("title")} subtitle={t("subtitle")} />
-      <section className="py-16 md:py-20">
-        <div className="mx-auto max-w-6xl px-4 lg:px-8">
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {practiceAreas.map((area) => (
               <PracticeAreaCard
                 key={area.slug}

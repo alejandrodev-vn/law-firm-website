@@ -20,15 +20,15 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="ml-2 flex items-center gap-1 border-l border-navy-light pl-3">
+    <div className="ml-2 flex items-center gap-1 rounded-full bg-white/5 p-1">
       {locales.map((loc) => (
         <button
           key={loc.code}
           type="button"
           onClick={() => switchLocale(loc.code)}
-          className={`px-2 py-1 text-xs font-medium transition-colors ${
+          className={`rounded-full px-2.5 py-1 text-xs font-medium transition-all ${
             locale === loc.code
-              ? "text-gold-light"
+              ? "bg-white/15 text-gold-light"
               : "text-cream/60 hover:text-cream"
           }`}
         >

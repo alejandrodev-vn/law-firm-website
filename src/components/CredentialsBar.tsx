@@ -4,27 +4,24 @@ import { getLocalizedText } from "@/lib/locale";
 
 type Props = {
   locale: Locale;
-  title: string;
 };
 
-export default function CredentialsBar({ locale, title }: Props) {
+export default function CredentialsBar({ locale }: Props) {
+  const items = credentials.map((item) => getLocalizedText(item.label, locale));
+  const doubled = [...items, ...items];
+
   return (
-    <section className="border-b border-cream-dark bg-navy py-8">
-      <div className="mx-auto max-w-6xl px-4 lg:px-8">
-        <p className="mb-5 text-center text-xs font-medium tracking-widest text-gold-light uppercase">
-          {title}
-        </p>
-        <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3">
-          {credentials.map((item) => (
-            <div
-              key={item.id}
-              className="flex items-center gap-2 text-sm text-cream/80"
-            >
-              <span className="text-gold">✦</span>
-              {getLocalizedText(item.label, locale)}
-            </div>
-          ))}
-        </div>
+    <section className="overflow-hidden border-y border-cream-dark bg-white py-5">
+      <div className="flex animate-marquee gap-12 whitespace-nowrap">
+        {doubled.map((label, i) => (
+          <span
+            key={`${label}-${i}`}
+            className="flex items-center gap-3 text-sm font-medium text-navy/70"
+          >
+            <span className="h-1 w-1 rounded-full bg-gold" />
+            {label}
+          </span>
+        ))}
       </div>
     </section>
   );

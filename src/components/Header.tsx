@@ -27,8 +27,8 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-cream-dark bg-navy text-cream">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 lg:px-8">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-navy/80 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 lg:px-8">
         <Link href="/" className="group flex items-center gap-4">
           <Image
             src={siteConfig.logo}
@@ -48,10 +48,10 @@ export default function Header() {
             <Link
               key={item.key}
               href={item.href}
-              className={`px-3 py-2 text-sm transition-colors ${
+              className={`rounded-full px-4 py-2 text-sm font-medium transition-all ${
                 isActive(item.href)
-                  ? "text-gold-light"
-                  : "text-cream/80 hover:text-cream"
+                  ? "bg-white/10 text-gold-light"
+                  : "text-cream/70 hover:bg-white/5 hover:text-cream"
               }`}
             >
               {t(item.key)}
@@ -65,7 +65,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="p-2 text-cream"
+            className="rounded-full p-2 text-cream hover:bg-white/10"
             aria-label="Toggle menu"
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -80,14 +80,16 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <nav className="border-t border-navy-light bg-navy px-4 py-4 lg:hidden">
+        <nav className="border-t border-white/10 bg-navy/95 px-4 py-4 backdrop-blur-xl lg:hidden">
           {navItems.map((item) => (
             <Link
               key={item.key}
               href={item.href}
               onClick={() => setMenuOpen(false)}
-              className={`block py-3 text-sm ${
-                isActive(item.href) ? "text-gold-light" : "text-cream/80"
+              className={`block rounded-xl px-4 py-3 text-sm ${
+                isActive(item.href)
+                  ? "bg-white/10 text-gold-light"
+                  : "text-cream/80"
               }`}
             >
               {t(item.key)}

@@ -26,10 +26,10 @@ function AboutContent({ locale }: { locale: Locale }) {
   return (
     <>
       <PageHeader title={t("title")} subtitle={t("subtitle")} />
-      <section className="py-16 md:py-20">
-        <div className="mx-auto max-w-6xl px-4 lg:px-8">
+      <section className="py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid items-center gap-12 lg:grid-cols-2">
-            <div className="relative aspect-[4/3] overflow-hidden">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-2xl">
               <Image
                 src="/images/about-office.jpg"
                 alt=""
@@ -39,52 +39,48 @@ function AboutContent({ locale }: { locale: Locale }) {
               />
             </div>
             <div className="space-y-6">
-              <p className="text-base leading-relaxed text-charcoal/80 md:text-lg">
-                {t("intro")}
-              </p>
-              <p className="text-sm leading-relaxed text-charcoal/70">
-                {t("scope")}
-              </p>
-              <p className="border-l-2 border-gold pl-6 text-sm leading-relaxed text-charcoal/70">
+              <p className="text-lg leading-relaxed text-charcoal/80">{t("intro")}</p>
+              <p className="text-base leading-relaxed text-muted">{t("scope")}</p>
+              <p className="rounded-2xl border-l-4 border-gold bg-cream/40 p-6 text-base leading-relaxed text-charcoal/75">
                 {t("commitment")}
               </p>
             </div>
           </div>
 
-          <div className="mt-16 grid gap-8 md:grid-cols-2">
-            <div className="border-t-2 border-gold bg-white p-8">
-              <p className="text-xs font-semibold tracking-[0.2em] text-gold uppercase">
+          <div className="mt-20 grid gap-6 md:grid-cols-2">
+            <div className="card-hover rounded-3xl bg-navy p-8 text-cream">
+              <p className="text-xs font-bold tracking-[0.25em] text-gold-light uppercase">
                 {t("beyondLawTitle")}
               </p>
-              <p className="mt-4 text-sm leading-relaxed text-charcoal/80">
+              <p className="mt-5 text-base leading-relaxed text-cream/80">
                 {t("beyondLawDesc")}
               </p>
             </div>
-            <div className="border-t-2 border-navy bg-navy p-8 text-cream">
-              <p className="text-xs font-semibold tracking-[0.2em] text-gold-light uppercase">
+            <div className="card-hover rounded-3xl border border-cream-dark bg-white p-8">
+              <p className="text-xs font-bold tracking-[0.25em] text-gold uppercase">
                 {t("besideYouTitle")}
               </p>
-              <p className="mt-4 text-sm leading-relaxed text-cream/80">
+              <p className="mt-5 text-base leading-relaxed text-charcoal/75">
                 {t("besideYouDesc")}
               </p>
             </div>
           </div>
 
-          <div className="mt-16 text-center">
-            <h2 className="font-display text-2xl font-semibold text-navy">
+          <div className="mt-20 text-center">
+            <p className="text-xs font-semibold tracking-[0.25em] text-gold uppercase">
               {t("valuesTitle")}
-            </h2>
-            <p className="mt-2 text-sm tracking-widest text-gold uppercase">
+            </p>
+            <p className="mt-2 font-display text-xl font-semibold tracking-widest text-navy">
               {t("valuesSubtitle")}
             </p>
-            <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-charcoal/70">
+            <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted">
               {t("valuesDesc")}
             </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+            <div className="mt-10 grid gap-4 sm:grid-cols-3">
               {valueKeys.map((key) => (
                 <div
                   key={key}
-                  className="border border-cream-dark bg-white p-6 text-left"
+                  className="card-hover rounded-2xl border border-cream-dark bg-white p-6 text-left"
                 >
                   <p className="text-sm leading-relaxed text-charcoal/80">
                     {t(`values.${key}`)}
@@ -103,7 +99,7 @@ function AboutContent({ locale }: { locale: Locale }) {
         closing={t("clientsClosing")}
       />
 
-      <CredentialsBar locale={locale} title={tHome("keywordsTitle")} />
+      <CredentialsBar locale={locale} />
 
       <CtaBanner
         title={tHome("ctaTitle")}

@@ -1,18 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --navy: #1a2744;
-  --navy-light: #2a3d66;
-  --cream: #f5f0e8;
-  --cream-dark: #e8e0d4;
-  --gold: #b8860b;
-  --gold-light: #d4a843;
-  --charcoal: #2c2c2c;
-  --paper: #faf7f2;
+  --navy: #0c1222;
+  --navy-mid: #151d33;
+  --navy-light: #1e2a4a;
+  --cream: #f3efe6;
+  --cream-dark: #e5dfd3;
+  --gold: #c4a052;
+  --gold-light: #dbb96a;
+  --charcoal: #1a1f2e;
+  --paper: #faf9f7;
+  --muted: #6b7280;
 }
 
 @theme inline {
   --color-navy: var(--navy);
+  --color-navy-mid: var(--navy-mid);
   --color-navy-light: var(--navy-light);
   --color-cream: var(--cream);
   --color-cream-dark: var(--cream-dark);
@@ -20,6 +23,7 @@
   --color-gold-light: var(--gold-light);
   --color-charcoal: var(--charcoal);
   --color-paper: var(--paper);
+  --color-muted: var(--muted);
   --font-sans: var(--font-body), system-ui, sans-serif;
   --font-display: var(--font-heading), var(--font-body), system-ui, sans-serif;
 }
@@ -34,10 +38,65 @@ body {
   --font-display: var(--font-cjk), var(--font-heading), var(--font-body), system-ui, sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-family: var(--font-display);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s ease-out both;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-light {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #f3efe6 0%, #dbb96a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mesh-bg {
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 20%, rgba(196, 160, 82, 0.12), transparent),
+    radial-gradient(ellipse 60% 50% at 90% 80%, rgba(30, 42, 74, 0.4), transparent),
+    var(--navy);
+}
+
+.card-hover {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(12, 18, 34, 0.15);
 }

@@ -23,10 +23,10 @@ function ContactContent() {
   return (
     <>
       <PageHeader title={t("title")} subtitle={t("subtitle")} />
-      <section className="py-16 md:py-20">
-        <div className="mx-auto max-w-6xl px-4 lg:px-8">
+      <section className="py-24 md:py-32">
+        <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-2">
-            <div>
+            <div className="rounded-3xl border border-cream-dark bg-white p-8 shadow-sm">
               <h2 className="font-display text-xl font-semibold text-navy">
                 {t("formTitle")}
               </h2>
@@ -35,55 +35,42 @@ function ContactContent() {
               </div>
             </div>
 
-            <div>
-              <div className="space-y-6 border border-cream-dark bg-white p-8">
-                <div>
-                  <h3 className="text-xs font-semibold tracking-wider text-charcoal/50 uppercase">
-                    {t("address")}
-                  </h3>
-                  <p className="mt-2 text-sm text-charcoal/80">
-                    {siteConfig.address[locale]}
-                  </p>
-                </div>
-                <div>
-                  <h3 className="text-xs font-semibold tracking-wider text-charcoal/50 uppercase">
-                    {t("phone")}
-                  </h3>
-                  <a
-                    href={`tel:${siteConfig.phoneTel}`}
-                    className="mt-2 block text-lg font-medium text-navy hover:text-gold"
+            <div className="space-y-6">
+              <div className="grid gap-4 sm:grid-cols-2">
+                {[
+                  { label: t("address"), value: siteConfig.address[locale] },
+                  { label: t("phone"), value: siteConfig.phone, href: `tel:${siteConfig.phoneTel}` },
+                  { label: t("email"), value: siteConfig.email || t("updating") },
+                  { label: t("hours"), value: t("hoursValue") },
+                ].map((item) => (
+                  <div
+                    key={item.label}
+                    className="rounded-2xl border border-cream-dark bg-white p-5"
                   >
-                    {siteConfig.phone}
-                  </a>
-                </div>
-                <div>
-                  <h3 className="text-xs font-semibold tracking-wider text-charcoal/50 uppercase">
-                    {t("email")}
-                  </h3>
-                  {siteConfig.email ? (
-                    <a
-                      href={`mailto:${siteConfig.email}`}
-                      className="mt-2 block text-sm text-navy hover:text-gold"
-                    >
-                      {siteConfig.email}
-                    </a>
-                  ) : (
-                    <p className="mt-2 text-sm text-charcoal/50">{t("updating")}</p>
-                  )}
-                </div>
-                <div>
-                  <h3 className="text-xs font-semibold tracking-wider text-charcoal/50 uppercase">
-                    {t("hours")}
-                  </h3>
-                  <p className="mt-2 text-sm text-charcoal/80">{t("hoursValue")}</p>
-                </div>
+                    <p className="text-xs font-bold tracking-wider text-muted uppercase">
+                      {item.label}
+                    </p>
+                    {item.href ? (
+                      <a
+                        href={item.href}
+                        className="mt-2 block text-lg font-semibold text-navy hover:text-gold"
+                      >
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="mt-2 text-sm text-charcoal/80">{item.value}</p>
+                    )}
+                  </div>
+                ))}
               </div>
 
-              <div className="mt-8">
-                <h3 className="mb-4 font-display text-lg font-semibold text-navy">
-                  {t("mapTitle")}
-                </h3>
-                <div className="aspect-video overflow-hidden border border-cream-dark">
+              <div className="overflow-hidden rounded-3xl border border-cream-dark shadow-sm">
+                <div className="px-6 py-4">
+                  <h3 className="font-display text-lg font-semibold text-navy">
+                    {t("mapTitle")}
+                  </h3>
+                </div>
+                <div className="aspect-video">
                   <iframe
                     src={siteConfig.mapEmbedUrl}
                     width="100%"

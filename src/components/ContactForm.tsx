@@ -12,9 +12,15 @@ export default function ContactForm() {
     setSubmitted(true);
   };
 
+  const inputClass =
+    "w-full rounded-2xl border border-cream-dark bg-white px-5 py-3.5 text-sm outline-none transition-all focus:border-gold focus:ring-2 focus:ring-gold/20";
+
   if (submitted) {
     return (
-      <div className="border border-gold/30 bg-cream p-8 text-center">
+      <div className="rounded-3xl border border-gold/30 bg-cream/50 p-10 text-center">
+        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold/20 text-gold">
+          ✓
+        </div>
         <p className="text-navy">{t("formSuccess")}</p>
       </div>
     );
@@ -24,56 +30,34 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-1.5 block text-sm font-medium text-navy">
+          <label htmlFor="name" className="mb-2 block text-sm font-medium text-navy">
             {t("formName")}
           </label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            required
-            className="w-full border border-cream-dark bg-white px-4 py-2.5 text-sm outline-none transition-colors focus:border-gold"
-          />
+          <input id="name" name="name" type="text" required className={inputClass} />
         </div>
         <div>
-          <label htmlFor="email" className="mb-1.5 block text-sm font-medium text-navy">
+          <label htmlFor="email" className="mb-2 block text-sm font-medium text-navy">
             {t("formEmail")}
           </label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            required
-            className="w-full border border-cream-dark bg-white px-4 py-2.5 text-sm outline-none transition-colors focus:border-gold"
-          />
+          <input id="email" name="email" type="email" required className={inputClass} />
         </div>
       </div>
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="phone" className="mb-1.5 block text-sm font-medium text-navy">
+          <label htmlFor="phone" className="mb-2 block text-sm font-medium text-navy">
             {t("formPhone")}
           </label>
-          <input
-            id="phone"
-            name="phone"
-            type="tel"
-            className="w-full border border-cream-dark bg-white px-4 py-2.5 text-sm outline-none transition-colors focus:border-gold"
-          />
+          <input id="phone" name="phone" type="tel" className={inputClass} />
         </div>
         <div>
-          <label htmlFor="subject" className="mb-1.5 block text-sm font-medium text-navy">
+          <label htmlFor="subject" className="mb-2 block text-sm font-medium text-navy">
             {t("formSubject")}
           </label>
-          <input
-            id="subject"
-            name="subject"
-            type="text"
-            className="w-full border border-cream-dark bg-white px-4 py-2.5 text-sm outline-none transition-colors focus:border-gold"
-          />
+          <input id="subject" name="subject" type="text" className={inputClass} />
         </div>
       </div>
       <div>
-        <label htmlFor="message" className="mb-1.5 block text-sm font-medium text-navy">
+        <label htmlFor="message" className="mb-2 block text-sm font-medium text-navy">
           {t("formMessage")}
         </label>
         <textarea
@@ -81,12 +65,12 @@ export default function ContactForm() {
           name="message"
           rows={5}
           required
-          className="w-full resize-none border border-cream-dark bg-white px-4 py-2.5 text-sm outline-none transition-colors focus:border-gold"
+          className={`${inputClass} resize-none`}
         />
       </div>
       <button
         type="submit"
-        className="bg-navy px-8 py-3 text-sm font-medium tracking-wide text-cream transition-colors hover:bg-navy-light"
+        className="w-full rounded-full bg-navy py-4 text-sm font-semibold text-cream transition-all hover:bg-navy-light hover:shadow-lg sm:w-auto sm:px-12"
       >
         {t("formSubmit")}
       </button>

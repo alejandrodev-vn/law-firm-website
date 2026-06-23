@@ -19,32 +19,30 @@ export default function Footer() {
   ] as const;
 
   return (
-    <footer className="bg-navy text-cream">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 lg:grid-cols-3 lg:px-8">
-        <div>
+    <footer className="mesh-bg text-cream">
+      <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 lg:grid-cols-12 lg:px-8">
+        <div className="lg:col-span-5">
           <Image
             src={siteConfig.logoTransparent}
             alt="SOPHYS"
-            width={120}
-            height={87}
-            className="mb-4 h-12 w-auto object-contain"
+            width={140}
+            height={100}
+            className="h-14 w-auto object-contain"
           />
-          <p className="text-sm leading-relaxed text-cream/70">{t("description")}</p>
-          <p className="mt-3 text-sm leading-relaxed text-cream/60">
-            {siteConfig.address[locale]}
-          </p>
+          <p className="mt-5 text-sm leading-relaxed text-cream/60">{t("description")}</p>
+          <p className="mt-3 text-sm text-cream/50">{siteConfig.address[locale]}</p>
         </div>
 
-        <div>
-          <h3 className="mb-4 text-sm font-semibold tracking-wider text-gold-light uppercase">
+        <div className="lg:col-span-3">
+          <h3 className="mb-5 text-xs font-bold tracking-[0.2em] text-gold-light uppercase">
             {t("quickLinks")}
           </h3>
-          <ul className="space-y-2">
+          <ul className="space-y-3">
             {quickLinks.map((link) => (
               <li key={link.key}>
                 <Link
                   href={link.href}
-                  className="text-sm text-cream/70 transition-colors hover:text-cream"
+                  className="text-sm text-cream/60 transition-colors hover:text-cream"
                 >
                   {tNav(link.key)}
                 </Link>
@@ -53,31 +51,34 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
-          <h3 className="mb-4 text-sm font-semibold tracking-wider text-gold-light uppercase">
+        <div className="lg:col-span-4">
+          <h3 className="mb-5 text-xs font-bold tracking-[0.2em] text-gold-light uppercase">
             {t("contactInfo")}
           </h3>
-          <ul className="space-y-2 text-sm text-cream/70">
+          <ul className="space-y-3 text-sm">
             <li>
-              <a href={`tel:${siteConfig.phoneTel}`} className="hover:text-cream">
+              <a
+                href={`tel:${siteConfig.phoneTel}`}
+                className="font-medium text-cream hover:text-gold-light"
+              >
                 {siteConfig.phone}
               </a>
             </li>
             {siteConfig.email ? (
               <li>
-                <a href={`mailto:${siteConfig.email}`} className="hover:text-cream">
+                <a href={`mailto:${siteConfig.email}`} className="text-cream/60 hover:text-cream">
                   {siteConfig.email}
                 </a>
               </li>
             ) : (
-              <li className="text-cream/50">{tContact("updating")}</li>
+              <li className="text-cream/40">{tContact("updating")}</li>
             )}
           </ul>
         </div>
       </div>
 
-      <div className="border-t border-navy-light">
-        <div className="mx-auto max-w-6xl px-4 py-4 text-center text-xs text-cream/50 lg:px-8">
+      <div className="border-t border-white/10">
+        <div className="mx-auto max-w-7xl px-4 py-5 text-center text-xs text-cream/40 lg:px-8">
           {t("copyright", { year })}
         </div>
       </div>
