@@ -44,7 +44,7 @@ export default function Header() {
   return (
     <header
       className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled ? "header-glass-scrolled shadow-lg shadow-black/25" : "header-glass"
+        scrolled ? "header-light-scrolled" : "header-light"
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:py-3 md:px-6 lg:px-8">
@@ -60,7 +60,7 @@ export default function Header() {
             className="h-11 w-auto shrink-0 object-contain transition-opacity duration-300 group-hover:opacity-90 sm:h-14 md:h-16 lg:h-[4.5rem]"
             priority
           />
-          <span className="hidden border-l border-champagne/25 pl-3 text-[10px] leading-relaxed tracking-[0.18em] text-champagne/90 uppercase sm:pl-4 sm:text-[11px] sm:tracking-[0.2em] md:block lg:max-w-[12rem]">
+          <span className="hidden border-l border-[#8B6A2E]/25 pl-3 text-[10px] leading-relaxed tracking-[0.18em] text-[#8B6A2E] uppercase sm:pl-4 sm:text-[11px] sm:tracking-[0.2em] md:block lg:max-w-[12rem]">
             {tMeta("tagline")}
           </span>
         </Link>
@@ -75,8 +75,8 @@ export default function Header() {
                 data-active={active}
                 className={`nav-link focus-ring rounded-lg px-2.5 py-2.5 text-xs font-medium transition-colors duration-300 md:px-3 md:text-sm lg:px-4 ${
                   active
-                    ? "text-champagne"
-                    : "text-ivory/85 hover:text-ivory"
+                    ? "font-semibold text-[#8B6A2E]"
+                    : "text-slate-700/80 hover:text-burgundy"
                 }`}
               >
                 {t(item.key)}
@@ -91,7 +91,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="focus-ring rounded-lg p-2.5 text-ivory transition-colors hover:bg-white/10"
+            className="focus-ring rounded-lg p-2.5 text-slate-800 transition-colors hover:bg-slate-900/5"
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
           >
