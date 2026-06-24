@@ -40,9 +40,15 @@
       "step3": { "title": "方案执行", "desc": "起草文件，按既定方案进行谈判或诉讼代理。" },
       "step4": { "title": "跟踪支持", "desc": "汇报结果，提供后续咨询及长期法律陪伴。" }
     },
-    "ctaTitle": "需要法律咨询？",
-    "ctaSubtitle": "联系SOPHYS律师事务所——我们随时准备与您同行。",
-    "ctaButton": "立即联系"
+    "ctaTitle": "讨论您的法律事务",
+    "ctaSubtitle": "预约与我们法律团队咨询——我们随时准备与您同行。",
+    "ctaButton": "预约咨询",
+    "stats": {
+      "label": "概览",
+      "practiceAreas": "业务领域",
+      "languages": "支持语言",
+      "location": "总部位于胡志明市"
+    }
   },
   "about": {
     "title": "关于SOPHYS律师事务所",
@@ -68,7 +74,8 @@
   "practiceAreas": {
     "title": "业务领域",
     "subtitle": "多元化的法律服务，满足企业、投资者和个人的需求。",
-    "learnMore": "了解更多"
+    "learnMore": "了解更多",
+    "featured": "重点"
   },
   "practiceDetail": {
     "servicesTitle": "主要服务",
@@ -105,6 +112,9 @@
     "description": "SOPHYS律师事务所 — BEYOND LAW. BESIDE YOU.",
     "quickLinks": "快速链接",
     "contactInfo": "联系信息",
-    "copyright": "© {year} SOPHYS律师事务所。保留所有权利。"
+    "copyright": "© {year} SOPHYS律师事务所。保留所有权利。",
+    "disclaimer": "本网站信息仅供一般参考，不构成法律意见。请咨询专业律师以获取针对您具体事项的建议。",
+    "privacy": "隐私政策",
+    "terms": "使用条款"
   }
 }

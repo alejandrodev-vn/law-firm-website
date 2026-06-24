@@ -7,6 +7,7 @@ import HeroSection from "@/components/HeroSection";
 import PracticeAreaCard from "@/components/PracticeAreaCard";
 import NewsCard from "@/components/NewsCard";
 import CredentialsBar from "@/components/CredentialsBar";
+import TrustStatsSection from "@/components/TrustStatsSection";
 import PhilosophySection from "@/components/PhilosophySection";
 import ProcessSection from "@/components/ProcessSection";
 import ClientsSection from "@/components/ClientsSection";
@@ -46,6 +47,7 @@ function HomeContent({ locale }: { locale: Locale }) {
         statHotline={t("heroStatHotline")}
       />
 
+      <TrustStatsSection />
       <CredentialsBar locale={locale} />
 
       <PhilosophySection
@@ -66,7 +68,7 @@ function HomeContent({ locale }: { locale: Locale }) {
             linkText={t("viewAll")}
             compact
           />
-          <div className="mt-6 grid grid-cols-2 gap-2.5 sm:mt-8 sm:gap-3 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-3 sm:mt-8 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
             {practiceAreas.map((area, i) => (
               <PracticeAreaCard
                 key={area.slug}
@@ -74,6 +76,8 @@ function HomeContent({ locale }: { locale: Locale }) {
                 locale={locale}
                 learnMore={tPractice("learnMore")}
                 featured={i === 0}
+                featuredLabel={tPractice("featured")}
+                index={i}
               />
             ))}
           </div>
@@ -128,6 +132,7 @@ function HomeContent({ locale }: { locale: Locale }) {
         title={t("ctaTitle")}
         subtitle={t("ctaSubtitle")}
         cta={t("ctaButton")}
+        ctaSecondary={t("heroStatHotline")}
       />
     </>
   );

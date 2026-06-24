@@ -10,6 +10,7 @@
     "verify:responsive": "node scripts/verify-responsive.mjs"
   },
   "dependencies": {
+    "framer-motion": "^12.41.0",
     "next": "16.2.9",
     "next-intl": "^4.13.0",
     "react": "19.2.4",

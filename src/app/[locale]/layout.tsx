@@ -6,7 +6,11 @@ import { Inter, Noto_Sans_SC, Plus_Jakarta_Sans } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
+import type { Locale } from "@/i18n/routing";
 import "../globals.css";
+
+const siteUrl = "https://law-firm-demo.huytra.dev";
 
 const inter = Inter({
   variable: "--font-body",
@@ -51,11 +55,20 @@ export async function generateMetadata({
       template: `%s | ${messages.meta.siteName}`,
     },
     description: messages.home.heroSubtitle,
+    metadataBase: new URL(siteUrl),
     openGraph: {
       title: messages.meta.siteName,
       description: messages.meta.tagline,
       locale,
       type: "website",
+      siteName: messages.meta.siteName,
+      images: [{ url: "/images/hero-hcm-poster.jpg", width: 1280, height: 720, alt: messages.meta.siteName }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: messages.meta.siteName,
+      description: messages.meta.tagline,
+      images: ["/images/hero-hcm-poster.jpg"],
     },
   };
 }
@@ -74,6 +87,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   setRequestLocale(locale);
   const messages = await getMessages();
+  const localeMessages = (await import(`@/messages/${locale}.json`)).default;
 
   return (
     <html
@@ -81,6 +95,11 @@ export default async function LocaleLayout({ children, params }: Props) {
       className={`${inter.variable} ${plusJakarta.variable} ${notoSansSC.variable} h-full antialiased ${locale === "zh" ? "locale-zh" : ""}`}
     >
       <body className="flex min-h-full flex-col bg-paper font-sans text-charcoal">
+        <JsonLd
+          locale={locale as Locale}
+          siteName={localeMessages.meta.siteName}
+          description={localeMessages.home.heroSubtitle}
+        />
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main className="flex-1">{children}</main>

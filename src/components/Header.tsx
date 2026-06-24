@@ -22,34 +22,48 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  const isHome = pathname === "/";
+
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [menuOpen]);
 
   const isActive = (href: string) => {
     if (href === "/") return pathname === "/";
     return pathname.startsWith(href);
   };
 
+  const headerBg = scrolled
+    ? "border-b border-white/10 bg-navy/95 shadow-lg shadow-black/20"
+    : isHome
+      ? "border-b border-white/5 bg-navy/40"
+      : "border-b border-white/8 bg-navy-mid/90";
+
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 backdrop-blur-xl ${
-        scrolled
-          ? "border-b border-white/10 bg-navy/[0.97] shadow-lg shadow-black/25"
-          : "border-b border-white/[0.07] bg-navy-mid/[0.92]"
-      }`}
+      className={`sticky top-0 z-50 backdrop-blur-xl transition-all duration-500 ${headerBg}`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:py-3 md:px-6 lg:px-8">
-        <Link href="/" className="group flex min-w-0 items-center gap-2 sm:gap-3 md:gap-4">
+        <Link
+          href="/"
+          className="group flex min-w-0 items-center gap-2 sm:gap-3 md:gap-4 focus-ring rounded-lg"
+        >
           <Image
             src={siteConfig.logoTransparent}
             alt={tMeta("siteName")}
             width={160}
             height={116}
-            className="h-11 w-auto shrink-0 object-contain transition-opacity group-hover:opacity-90 sm:h-14 md:h-16 lg:h-[4.5rem]"
+            className="h-11 w-auto shrink-0 object-contain transition-opacity duration-300 group-hover:opacity-90 sm:h-14 md:h-16 lg:h-[4.5rem]"
             priority
           />
           <span className="hidden border-l border-gold/20 pl-3 text-[10px] leading-relaxed tracking-[0.18em] text-gold-light uppercase sm:pl-4 sm:text-[11px] sm:tracking-[0.2em] md:block lg:max-w-[12rem]">
@@ -64,23 +78,14 @@ export default function Header() {
               <Link
                 key={item.key}
                 href={item.href}
-                className={`relative rounded-lg px-2.5 py-2 text-xs font-medium transition-all md:px-3 md:py-2 md:text-sm lg:px-4 lg:py-2.5 ${
+                data-active={active}
+                className={`nav-link focus-ring rounded-lg px-2.5 py-2.5 text-xs font-medium transition-colors duration-300 md:px-3 md:text-sm lg:px-4 ${
                   active
                     ? "text-gold-light"
-                    : "text-cream/55 hover:bg-white/5 hover:text-cream"
+                    : "text-cream/60 hover:text-cream"
                 }`}
               >
                 {t(item.key)}
-                <span
-                  className={`absolute right-3 bottom-1.5 left-3 h-px rounded-full transition-all ${
-                    active
-                      ? "bg-gradient-to-r from-transparent via-gold to-transparent opacity-100"
-                      : "opacity-0"
-                  }`}
-                />
-                {active && (
-                  <span className="absolute top-1.5 left-1/2 h-1 w-1 -translate-x-1/2 rounded-full bg-gold-light" />
-                )}
               </Link>
             );
           })}
@@ -92,8 +97,9 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="rounded-lg p-2 text-cream/80 hover:bg-white/10"
+            className="focus-ring rounded-lg p-2.5 text-cream/80 transition-colors hover:bg-white/10"
             aria-label="Toggle menu"
+            aria-expanded={menuOpen}
           >
             <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               {menuOpen ? (
@@ -107,7 +113,7 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <nav className="border-t border-white/10 bg-navy/95 px-4 py-4 backdrop-blur-xl md:hidden">
+        <nav className="max-h-[70vh] overflow-y-auto border-t border-white/10 bg-navy/97 px-4 py-3 backdrop-blur-xl md:hidden">
           {navItems.map((item) => {
             const active = isActive(item.href);
             return (
@@ -115,10 +121,10 @@ export default function Header() {
                 key={item.key}
                 href={item.href}
                 onClick={() => setMenuOpen(false)}
-                className={`flex items-center gap-3 rounded-xl px-4 py-3 text-sm transition-colors ${
+                className={`focus-ring flex min-h-11 items-center gap-3 rounded-xl px-4 py-3 text-sm transition-colors ${
                   active
                     ? "border-l-2 border-gold bg-gold/10 pl-[14px] font-medium text-gold-light"
-                    : "text-cream/75 hover:bg-white/5"
+                    : "text-cream/75 hover:bg-white/5 hover:text-cream"
                 }`}
               >
                 {t(item.key)}

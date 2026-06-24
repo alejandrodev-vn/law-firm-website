@@ -40,9 +40,15 @@
       "step3": { "title": "Implementation", "desc": "Draft documents, represent in negotiations or litigation per the agreed plan." },
       "step4": { "title": "Follow-up & Support", "desc": "Report results, provide post-matter advisory, and long-term legal partnership." }
     },
-    "ctaTitle": "Need Legal Advice?",
-    "ctaSubtitle": "Contact SOPHYS LAW FIRM — we are ready to partner with you.",
-    "ctaButton": "Contact Us"
+    "ctaTitle": "Discuss Your Legal Matter",
+    "ctaSubtitle": "Schedule a consultation with our legal team — we are ready to partner with you.",
+    "ctaButton": "Schedule a Consultation",
+    "stats": {
+      "label": "At a Glance",
+      "practiceAreas": "Practice Areas",
+      "languages": "Languages Supported",
+      "location": "Based in Ho Chi Minh City"
+    }
   },
   "about": {
     "title": "About SOPHYS LAW FIRM",
@@ -68,7 +74,8 @@
   "practiceAreas": {
     "title": "Practice Areas",
     "subtitle": "Diverse legal services meeting the needs of businesses, investors, and individuals.",
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "featured": "Featured"
   },
   "practiceDetail": {
     "servicesTitle": "Key Services",
@@ -105,6 +112,9 @@
     "description": "SOPHYS LAW FIRM — BEYOND LAW. BESIDE YOU.",
     "quickLinks": "Quick Links",
     "contactInfo": "Contact Information",
-    "copyright": "© {year} SOPHYS LAW FIRM. All rights reserved."
+    "copyright": "© {year} SOPHYS LAW FIRM. All rights reserved.",
+    "disclaimer": "Information on this website is for general reference only and does not constitute legal advice. Please consult a qualified attorney for advice on your specific matter.",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use"
   }
 }

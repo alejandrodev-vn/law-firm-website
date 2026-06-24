@@ -44,7 +44,7 @@ export default function Footer() {
               <li key={link.key}>
                 <Link
                   href={link.href}
-                  className="text-sm text-cream/60 transition-colors hover:text-cream"
+                  className="focus-ring inline-block text-sm text-cream/60 transition-colors hover:text-cream"
                 >
                   {tNav(link.key)}
                 </Link>
@@ -61,14 +61,17 @@ export default function Footer() {
             <li>
               <a
                 href={`tel:${siteConfig.phoneTel}`}
-                className="font-medium text-cream hover:text-gold-light"
+                className="focus-ring inline-block font-medium text-cream transition-colors hover:text-gold-light"
               >
                 {siteConfig.phone}
               </a>
             </li>
             {siteConfig.email ? (
               <li>
-                <a href={`mailto:${siteConfig.email}`} className="text-cream/60 hover:text-cream">
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="focus-ring inline-block text-cream/60 transition-colors hover:text-cream"
+                >
                   {siteConfig.email}
                 </a>
               </li>
@@ -80,8 +83,18 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 py-5 text-center text-xs text-cream/40 md:px-6 lg:px-8">
-          {t("copyright", { year })}
+        <div className="mx-auto max-w-7xl space-y-3 px-4 py-6 md:px-6 lg:px-8">
+          <p className="text-center text-[11px] leading-relaxed text-cream/35 sm:text-xs">
+            {t("disclaimer")}
+          </p>
+          <div className="flex flex-col items-center justify-between gap-3 text-center text-xs text-cream/40 sm:flex-row sm:text-left">
+            <p>{t("copyright", { year })}</p>
+            <div className="flex items-center gap-4">
+              <span className="text-cream/30">{t("privacy")}</span>
+              <span className="text-cream/20">·</span>
+              <span className="text-cream/30">{t("terms")}</span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

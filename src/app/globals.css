@@ -4,11 +4,16 @@
   --navy: #0c1222;
   --navy-mid: #151d33;
   --navy-light: #1e2a4a;
+  --burgundy: #5c2434;
+  --burgundy-light: #7a3348;
   --cream: #f3efe6;
   --cream-dark: #e5dfd3;
+  --ivory: #faf8f4;
   --gold: #c4a052;
   --gold-light: #dbb96a;
+  --champagne: #e8dcc4;
   --charcoal: #1a1f2e;
+  --slate: #4a5568;
   --paper: #faf9f7;
   --muted: #6b7280;
 }
@@ -24,6 +29,11 @@
   --color-charcoal: var(--charcoal);
   --color-paper: var(--paper);
   --color-muted: var(--muted);
+  --color-burgundy: var(--burgundy);
+  --color-burgundy-light: var(--burgundy-light);
+  --color-ivory: var(--ivory);
+  --color-champagne: var(--champagne);
+  --color-slate: var(--slate);
   --font-sans: var(--font-body), system-ui, sans-serif;
   --font-display: var(--font-heading), var(--font-body), system-ui, sans-serif;
 }
@@ -171,10 +181,74 @@ h1, h2, h3, h4 {
 }
 
 .card-hover {
-  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+  transition:
+    transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.4s ease,
+    border-color 0.35s ease;
 }
 
 .card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px -12px rgba(12, 18, 34, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 32px -14px rgba(12, 18, 34, 0.12);
+}
+
+.card-hover-subtle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -12px rgba(12, 18, 34, 0.1);
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0.25rem;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-light), transparent);
+  transition: width 0.35s cubic-bezier(0.22, 1, 0.36, 1), left 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.nav-link:hover::after,
+.nav-link[data-active="true"]::after {
+  left: 12%;
+  width: 76%;
+}
+
+.hero-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.paper-texture {
+  background-image: radial-gradient(rgba(196, 160, 82, 0.04) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.legal-lines {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 31px,
+    rgba(196, 160, 82, 0.06) 31px,
+    rgba(196, 160, 82, 0.06) 32px
+  );
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid var(--gold-light);
+  outline-offset: 3px;
+}
+
+.timeline-line-h {
+  background: linear-gradient(90deg, transparent, rgba(219, 185, 106, 0.35), transparent);
+}
+
+.timeline-line-v {
+  background: linear-gradient(180deg, rgba(219, 185, 106, 0.45), rgba(219, 185, 106, 0.08));
 }

@@ -40,9 +40,15 @@
       "step3": { "title": "Triển khai giải pháp", "desc": "Soạn thảo hồ sơ, đại diện thương lượng hoặc tố tụng theo phương án đã thống nhất." },
       "step4": { "title": "Theo dõi & hỗ trợ", "desc": "Báo cáo kết quả, tư vấn hậu kỳ và đồng hành pháp lý dài hạn." }
     },
-    "ctaTitle": "Cần tư vấn pháp lý?",
-    "ctaSubtitle": "Liên hệ SOPHYS LAW FIRM — chúng tôi sẵn sàng đồng hành cùng bạn.",
-    "ctaButton": "Liên hệ ngay"
+    "ctaTitle": "Trao đổi vấn đề pháp lý của bạn",
+    "ctaSubtitle": "Đặt lịch tư vấn với đội ngũ pháp lý — chúng tôi sẵn sàng đồng hành cùng bạn.",
+    "ctaButton": "Đặt lịch tư vấn",
+    "stats": {
+      "label": "Tổng quan",
+      "practiceAreas": "Lĩnh vực hoạt động",
+      "languages": "Ngôn ngữ hỗ trợ",
+      "location": "Trụ sở tại TP.HCM"
+    }
   },
   "about": {
     "title": "Về SOPHYS LAW FIRM",
@@ -68,7 +74,8 @@
   "practiceAreas": {
     "title": "Lĩnh vực hoạt động",
     "subtitle": "Dịch vụ pháp lý đa dạng, đáp ứng nhu cầu của doanh nghiệp, nhà đầu tư và cá nhân.",
-    "learnMore": "Tìm hiểu thêm"
+    "learnMore": "Tìm hiểu thêm",
+    "featured": "Nổi bật"
   },
   "practiceDetail": {
     "servicesTitle": "Dịch vụ chính",
@@ -105,6 +112,9 @@
     "description": "SOPHYS LAW FIRM — BEYOND LAW. BESIDE YOU.",
     "quickLinks": "Liên kết nhanh",
     "contactInfo": "Thông tin liên hệ",
-    "copyright": "© {year} Công ty Luật TNHH SOPHYS. Bảo lưu mọi quyền."
+    "copyright": "© {year} Công ty Luật TNHH SOPHYS. Bảo lưu mọi quyền.",
+    "disclaimer": "Thông tin trên website chỉ mang tính tham khảo chung, không cấu thành tư vấn pháp lý. Vui lòng liên hệ luật sư để được tư vấn về vụ việc cụ thể của bạn.",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản sử dụng"
   }
 }

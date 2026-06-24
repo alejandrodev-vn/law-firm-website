@@ -34,8 +34,9 @@ export default function HeroSection({
           poster={siteConfig.heroPoster}
           className="h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/40 to-navy/20 sm:from-navy/75 sm:via-navy/25 sm:to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/50 via-transparent to-navy/25" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/82 via-navy/45 to-navy/25 sm:from-navy/78 sm:via-navy/30 sm:to-navy/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/55 via-transparent to-navy/20" />
+        <div className="hero-pattern absolute inset-0 opacity-35" />
       </div>
 
       <div className="hero-float-1 absolute -right-20 top-1/4 hidden h-72 w-72 rounded-full bg-gold/5 blur-3xl sm:block md:h-96 md:w-96" />
@@ -49,9 +50,12 @@ export default function HeroSection({
               {tagline}
             </span>
           </div>
+          <div className="hero-fade-up-2 mb-4 h-px w-12 bg-gradient-to-r from-gold/70 to-transparent sm:mb-5 sm:w-16" />
           <h1 className="font-display text-[1.65rem] leading-[1.12] font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
             <span className="hero-fade-up-2 block text-cream">{titleLine1}</span>
-            <span className="hero-fade-up-3 mt-0.5 block hero-shimmer sm:mt-1">{titleLine2}</span>
+            <span className="hero-fade-up-3 mt-0.5 block text-champagne sm:mt-1">
+              {titleLine2}
+            </span>
           </h1>
           <p className="hero-fade-up-4 mt-4 line-clamp-3 font-sans text-sm leading-relaxed text-cream/75 sm:mt-5 sm:line-clamp-none sm:text-base sm:text-cream/80 md:text-lg">
             {subtitle}
@@ -59,13 +63,13 @@ export default function HeroSection({
           <div className="hero-fade-up-5 mt-5 flex w-fit flex-col gap-2.5 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
             <Link
               href="/contact"
-              className="rounded-full bg-gold px-6 py-2.5 text-sm font-semibold text-navy transition-all hover:bg-gold-light sm:px-8 sm:py-3.5"
+              className="focus-ring inline-flex min-h-11 items-center justify-center rounded-full bg-gold px-6 py-2.5 text-sm font-semibold text-navy transition-all duration-300 hover:bg-gold-light sm:px-8 sm:py-3.5"
             >
               {ctaContact}
             </Link>
             <Link
               href="/practice-areas"
-              className="hidden rounded-full glass px-6 py-2.5 text-sm font-semibold text-cream transition-all hover:bg-white/10 sm:inline-flex sm:px-8 sm:py-3.5"
+              className="focus-ring hidden min-h-11 items-center justify-center rounded-full border border-white/15 px-6 py-2.5 text-sm font-semibold text-cream transition-all duration-300 hover:border-gold/30 hover:bg-white/8 sm:inline-flex sm:px-8 sm:py-3.5"
             >
               {ctaPractice}
             </Link>

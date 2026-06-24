@@ -34,10 +34,10 @@ export default function LanguageSwitcher({ compact = false }: Props) {
           key={loc.code}
           type="button"
           onClick={() => switchLocale(loc.code)}
-          className={`rounded-md px-1.5 py-0.5 text-[10px] font-medium transition-all sm:px-2.5 sm:py-1 sm:text-xs ${
+          className={`focus-ring min-h-8 rounded-md px-1.5 py-1 text-[10px] font-semibold transition-all sm:min-h-9 sm:px-2.5 sm:py-1 sm:text-xs ${
             locale === loc.code
-              ? "bg-gold/20 text-gold-light"
-              : "text-cream/50 hover:text-cream/80"
+              ? "bg-gold/25 text-gold-light shadow-sm shadow-gold/10"
+              : "text-cream/50 hover:bg-white/5 hover:text-cream/90"
           }`}
         >
           {loc.label}
