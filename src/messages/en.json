@@ -12,10 +12,13 @@
     "contact": "Contact"
   },
   "home": {
-    "heroTitle": "Beyond Law. Beside You.",
+    "heroTitleLine1": "SOPHYS",
+    "heroTitleLine2": "LAW FIRM",
     "heroSubtitle": "SOPHYS LAW FIRM provides legal advisory, non-litigation representation, and dispute resolution for individuals, businesses, and domestic and international investors.",
     "ctaContact": "Contact Us",
     "ctaPractice": "Practice Areas",
+    "heroStatPractice": "Practice Areas",
+    "heroStatHotline": "Advisory Hotline",
     "philosophyTitle": "Our Philosophy",
     "beyondLawTitle": "BEYOND LAW",
     "beyondLawDesc": "We understand that every legal matter is connected to business operations, investment decisions, and development goals. SOPHYS examines legal issues not only through regulations but within the context of operations, objectives, and growth direction — delivering practical, effective, and sustainable solutions.",

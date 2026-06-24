@@ -37,8 +37,8 @@ function NewsDetail({ locale, slug }: { locale: Locale; slug: string }) {
   return (
     <>
       <PageHeader title={getLocalizedText(article.title, locale)} />
-      <section className="py-24 md:py-32">
-        <div className="mx-auto max-w-3xl px-4 lg:px-8">
+      <section className="py-16 sm:py-20 md:py-28 lg:py-32">
+        <div className="mx-auto max-w-3xl px-4 md:px-6 lg:px-8">
           <Link
             href="/news"
             className="inline-flex items-center gap-2 text-sm font-medium text-gold hover:text-gold-light"

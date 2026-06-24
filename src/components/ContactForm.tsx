@@ -13,11 +13,11 @@ export default function ContactForm() {
   };
 
   const inputClass =
-    "w-full rounded-2xl border border-cream-dark bg-white px-5 py-3.5 text-sm outline-none transition-all focus:border-gold focus:ring-2 focus:ring-gold/20";
+    "w-full rounded-xl border border-cream-dark bg-white px-4 py-3 text-sm outline-none transition-all focus:border-gold focus:ring-2 focus:ring-gold/20 sm:rounded-2xl sm:px-5 sm:py-3.5 md:text-[15px]";
 
   if (submitted) {
     return (
-      <div className="rounded-3xl border border-gold/30 bg-cream/50 p-10 text-center">
+      <div className="rounded-2xl border border-gold/30 bg-cream/50 p-6 text-center sm:rounded-3xl sm:p-10">
         <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gold/20 text-gold">
           ✓
         </div>
@@ -27,7 +27,7 @@ export default function ContactForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-5">
+    <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="name" className="mb-2 block text-sm font-medium text-navy">

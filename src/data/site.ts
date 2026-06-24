@@ -7,6 +7,11 @@ export const siteConfig = {
   slogan: "BEYOND LAW. BESIDE YOU.",
   logo: "/images/sophys-logo.png",
   logoTransparent: "/images/sophys_law_firm_transparent.png",
+  heroVideo: "/videos/hero-hcm.mp4",
+  heroPoster: "/images/hero-hcm-poster.jpg",
+  /** Pexels free license — https://www.pexels.com/license/ */
+  heroVideoSource:
+    "https://www.pexels.com/video/drone-view-of-saigon-skyline-at-sunset-28896185/",
   phone: "0937.868.393",
   phoneTel: "+84937868393",
   email: "",

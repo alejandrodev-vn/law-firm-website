@@ -26,9 +26,9 @@ function AboutContent({ locale }: { locale: Locale }) {
   return (
     <>
       <PageHeader title={t("title")} subtitle={t("subtitle")} />
-      <section className="py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
+      <section className="py-16 sm:py-20 md:py-28 lg:py-32">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+          <div className="grid items-center gap-8 sm:gap-10 md:grid-cols-2 md:gap-12">
             <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-2xl">
               <Image
                 src="/images/about-office.jpg"
@@ -47,8 +47,8 @@ function AboutContent({ locale }: { locale: Locale }) {
             </div>
           </div>
 
-          <div className="mt-20 grid gap-6 md:grid-cols-2">
-            <div className="card-hover rounded-3xl bg-navy p-8 text-cream">
+          <div className="mt-12 grid gap-4 sm:mt-16 sm:gap-5 md:mt-20 md:grid-cols-2 md:gap-6">
+            <div className="card-hover rounded-2xl bg-navy p-6 text-cream sm:rounded-3xl sm:p-8">
               <p className="text-xs font-bold tracking-[0.25em] text-gold-light uppercase">
                 {t("beyondLawTitle")}
               </p>
@@ -56,7 +56,7 @@ function AboutContent({ locale }: { locale: Locale }) {
                 {t("beyondLawDesc")}
               </p>
             </div>
-            <div className="card-hover rounded-3xl border border-cream-dark bg-white p-8">
+            <div className="card-hover rounded-2xl border border-cream-dark bg-white p-6 sm:rounded-3xl sm:p-8">
               <p className="text-xs font-bold tracking-[0.25em] text-gold uppercase">
                 {t("besideYouTitle")}
               </p>
@@ -66,7 +66,7 @@ function AboutContent({ locale }: { locale: Locale }) {
             </div>
           </div>
 
-          <div className="mt-20 text-center">
+          <div className="mt-12 text-center sm:mt-16 md:mt-20">
             <p className="text-xs font-semibold tracking-[0.25em] text-gold uppercase">
               {t("valuesTitle")}
             </p>
@@ -76,7 +76,7 @@ function AboutContent({ locale }: { locale: Locale }) {
             <p className="mx-auto mt-4 max-w-3xl text-base leading-relaxed text-muted">
               {t("valuesDesc")}
             </p>
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            <div className="mt-8 grid gap-3 sm:mt-10 sm:grid-cols-2 sm:gap-4 md:grid-cols-3">
               {valueKeys.map((key) => (
                 <div
                   key={key}

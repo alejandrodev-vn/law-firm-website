@@ -2,12 +2,14 @@ import type { LocalizedText } from "./practice-areas";
 
 export type ClientType = {
   id: string;
+  image: string;
   title: LocalizedText;
 };
 
 export const clientTypes: ClientType[] = [
   {
     id: "investors",
+    image: "/images/clients/investors.jpg",
     title: {
       vi: "Nhà đầu tư trong nước và nước ngoài",
       en: "Domestic and foreign investors",
@@ -16,6 +18,7 @@ export const clientTypes: ClientType[] = [
   },
   {
     id: "fdi",
+    image: "/images/clients/fdi.jpg",
     title: {
       vi: "Doanh nghiệp có vốn đầu tư nước ngoài (FDI)",
       en: "Foreign-invested enterprises (FDI)",
@@ -24,6 +27,7 @@ export const clientTypes: ClientType[] = [
   },
   {
     id: "manufacturing",
+    image: "/images/clients/manufacturing.jpg",
     title: {
       vi: "Doanh nghiệp sản xuất, xuất nhập khẩu, EPE",
       en: "Manufacturing, import-export, and EPE enterprises",
@@ -32,6 +36,7 @@ export const clientTypes: ClientType[] = [
   },
   {
     id: "projects",
+    image: "/images/clients/projects.jpg",
     title: {
       vi: "Chủ đầu tư, nhà thầu và các bên tham gia dự án",
       en: "Investors, contractors, and project participants",
@@ -40,6 +45,7 @@ export const clientTypes: ClientType[] = [
   },
   {
     id: "sme",
+    image: "/images/clients/sme.jpg",
     title: {
       vi: "SMEs, startup và doanh nghiệp đang mở rộng",
       en: "SMEs, startups, and expanding businesses",
@@ -48,6 +54,7 @@ export const clientTypes: ClientType[] = [
   },
   {
     id: "individuals",
+    image: "/images/clients/individuals.jpg",
     title: {
       vi: "Cá nhân cần tư vấn pháp lý và bảo vệ quyền lợi",
       en: "Individuals seeking legal advisory and rights protection",

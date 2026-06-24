@@ -22,8 +22,8 @@ function NewsContent({ locale }: { locale: Locale }) {
   return (
     <>
       <PageHeader title={t("title")} subtitle={t("subtitle")} />
-      <section className="py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+      <section className="py-16 sm:py-20 md:py-28 lg:py-32">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {newsArticles.map((article, i) => (
               <NewsCard

@@ -12,10 +12,13 @@
     "contact": "联系我们"
   },
   "home": {
-    "heroTitle": "Beyond Law. Beside You.",
+    "heroTitleLine1": "SOPHYS",
+    "heroTitleLine2": "律师事务所",
     "heroSubtitle": "SOPHYS律师事务所为个人、企业、国内外投资者提供法律咨询、非诉讼代理及争议解决服务。",
     "ctaContact": "联系咨询",
     "ctaPractice": "业务领域",
+    "heroStatPractice": "业务领域",
+    "heroStatHotline": "咨询热线",
     "philosophyTitle": "执业理念",
     "beyondLawTitle": "BEYOND LAW",
     "beyondLawDesc": "我们深知每一个法律问题都与经营活动、投资决策和发展目标紧密相连。SOPHYS不仅从法规角度审视法律问题，更结合运营背景、目标和方向——提供切合实际、高效且可持续的解决方案。",

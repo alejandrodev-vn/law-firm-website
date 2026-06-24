@@ -28,14 +28,14 @@ export default function NewsCard({ article, locale, readMore, index = 0 }: Props
       href={`/news/${article.slug}`}
       className="card-hover group flex flex-col overflow-hidden rounded-3xl bg-white shadow-sm"
     >
-      <div className={`bg-gradient-to-br ${gradient} px-6 py-8`}>
+      <div className={`bg-gradient-to-br ${gradient} px-5 py-6 sm:px-6 sm:py-8`}>
         <span className="inline-block rounded-full bg-white/15 px-3 py-1 text-xs font-semibold tracking-wider text-cream uppercase">
           {getLocalizedText(article.category, locale)}
         </span>
         <time className="mt-3 block text-xs text-cream/60">{formattedDate}</time>
       </div>
-      <div className="flex flex-1 flex-col p-6">
-        <h3 className="font-display text-lg font-semibold text-navy transition-colors group-hover:text-gold">
+      <div className="flex flex-1 flex-col p-5 sm:p-6">
+        <h3 className="font-display text-base font-semibold text-navy transition-colors group-hover:text-gold sm:text-lg">
           {getLocalizedText(article.title, locale)}
         </h3>
         <p className="mt-2 flex-1 text-sm leading-relaxed text-muted">

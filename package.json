@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "verify:responsive": "node scripts/verify-responsive.mjs"
   },
   "dependencies": {
     "next": "16.2.9",

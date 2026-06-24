@@ -7,6 +7,7 @@ export type LocalizedText = {
 export type PracticeArea = {
   slug: string;
   icon: string;
+  image: string;
   title: LocalizedText;
   shortDesc: LocalizedText;
   fullDesc: LocalizedText;
@@ -17,6 +18,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "fdi-corporate",
     icon: "building",
+    image: "/images/practice-areas/fdi-corporate.png",
     title: {
       vi: "Đầu tư nước ngoài (FDI) và Doanh nghiệp",
       en: "Foreign Investment (FDI) & Corporate",
@@ -42,6 +44,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "investment-construction",
     icon: "home",
+    image: "/images/practice-areas/investment-construction.jpg",
     title: {
       vi: "Đầu tư, Xây dựng và Dự án",
       en: "Investment, Construction & Projects",
@@ -67,6 +70,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "contracts-commerce",
     icon: "document",
+    image: "/images/practice-areas/contracts-commerce.jpg",
     title: {
       vi: "Hợp đồng và Giao dịch thương mại",
       en: "Contracts & Commercial Transactions",
@@ -92,6 +96,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "dispute-litigation",
     icon: "scale",
+    image: "/images/practice-areas/dispute-litigation.jpg",
     title: {
       vi: "Giải quyết tranh chấp và Tố tụng",
       en: "Dispute Resolution & Litigation",
@@ -117,6 +122,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "customs-trade",
     icon: "globe",
+    image: "/images/practice-areas/customs-trade.jpg",
     title: {
       vi: "Hải quan, Xuất nhập khẩu và Tuân thủ thương mại",
       en: "Customs, Import/Export & Trade Compliance",
@@ -142,6 +148,7 @@ export const practiceAreas: PracticeArea[] = [
   {
     slug: "retainer-advisory",
     icon: "shield",
+    image: "/images/practice-areas/retainer-advisory.jpg",
     title: {
       vi: "Tư vấn pháp lý thường xuyên",
       en: "Ongoing Legal Advisory",

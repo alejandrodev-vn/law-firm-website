@@ -8,6 +8,7 @@ type Props = {
   linkText?: string;
   dark?: boolean;
   centered?: boolean;
+  compact?: boolean;
 };
 
 export default function SectionHeader({
@@ -18,25 +19,26 @@ export default function SectionHeader({
   linkText,
   dark = false,
   centered = false,
+  compact = false,
 }: Props) {
   return (
     <div
-      className={`flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between ${
-        centered ? "text-center sm:flex-col sm:items-center" : ""
-      }`}
+      className={`flex flex-col sm:flex-row sm:items-end sm:justify-between ${
+        compact ? "gap-3" : "gap-4"
+      } ${centered ? "text-center sm:flex-col sm:items-center" : ""}`}
     >
       <div className={centered ? "max-w-2xl" : ""}>
         {label && (
           <p
-            className={`mb-3 text-xs font-semibold tracking-[0.25em] uppercase ${
-              dark ? "text-gold-light" : "text-gold"
-            }`}
+            className={`font-sans text-xs font-semibold tracking-[0.25em] uppercase ${
+              compact ? "mb-2" : "mb-3"
+            } ${dark ? "text-gold-light" : "text-gold"}`}
           >
             {label}
           </p>
         )}
         <h2
-          className={`font-display text-3xl font-semibold tracking-tight md:text-4xl ${
+          className={`font-display text-2xl font-semibold tracking-tight sm:text-3xl md:text-4xl ${
             dark ? "text-cream" : "text-navy"
           }`}
         >
@@ -44,9 +46,9 @@ export default function SectionHeader({
         </h2>
         {subtitle && (
           <p
-            className={`mt-3 text-base leading-relaxed ${
-              dark ? "text-cream/60" : "text-muted"
-            }`}
+            className={`font-sans text-base leading-relaxed md:text-[17px] md:leading-relaxed ${
+              compact ? "mt-2" : "mt-3"
+            } ${dark ? "text-cream/60" : "text-muted"}`}
           >
             {subtitle}
           </p>
@@ -55,7 +57,7 @@ export default function SectionHeader({
       {linkHref && linkText && (
         <Link
           href={linkHref}
-          className={`group hidden shrink-0 items-center gap-2 text-sm font-medium sm:flex ${
+          className={`group hidden shrink-0 items-center gap-2 font-sans text-sm font-medium sm:flex ${
             dark ? "text-gold-light hover:text-cream" : "text-gold hover:text-gold-light"
           }`}
         >

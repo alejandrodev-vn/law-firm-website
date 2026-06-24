@@ -35,8 +35,8 @@ function PracticeAreaDetail({ locale, slug }: { locale: Locale; slug: string }) 
         title={getLocalizedText(area.title, locale)}
         subtitle={getLocalizedText(area.shortDesc, locale)}
       />
-      <section className="py-24 md:py-32">
-        <div className="mx-auto max-w-4xl px-4 lg:px-8">
+      <section className="py-16 sm:py-20 md:py-28 lg:py-32">
+        <div className="mx-auto max-w-4xl px-4 md:px-6 lg:px-8">
           <Link
             href="/practice-areas"
             className="inline-flex items-center gap-2 text-sm font-medium text-gold hover:text-gold-light"
@@ -52,7 +52,7 @@ function PracticeAreaDetail({ locale, slug }: { locale: Locale; slug: string }) 
             <h2 className="font-display text-2xl font-semibold text-navy">
               {t("servicesTitle")}
             </h2>
-            <ul className="mt-8 grid gap-3 sm:grid-cols-2">
+            <ul className="mt-8 grid gap-3 md:grid-cols-2">
               {area.services.map((service) => (
                 <li
                   key={getLocalizedText(service, locale)}

@@ -23,10 +23,10 @@ function ContactContent() {
   return (
     <>
       <PageHeader title={t("title")} subtitle={t("subtitle")} />
-      <section className="py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2">
-            <div className="rounded-3xl border border-cream-dark bg-white p-8 shadow-sm">
+      <section className="py-16 sm:py-20 md:py-28 lg:py-32">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
+          <div className="grid gap-8 sm:gap-10 md:grid-cols-2 md:gap-12">
+            <div className="rounded-2xl border border-cream-dark bg-white p-5 shadow-sm sm:rounded-3xl sm:p-6 md:p-8">
               <h2 className="font-display text-xl font-semibold text-navy">
                 {t("formTitle")}
               </h2>
@@ -35,8 +35,8 @@ function ContactContent() {
               </div>
             </div>
 
-            <div className="space-y-6">
-              <div className="grid gap-4 sm:grid-cols-2">
+            <div className="space-y-4 sm:space-y-6">
+              <div className="grid gap-3 sm:grid-cols-2 sm:gap-4">
                 {[
                   { label: t("address"), value: siteConfig.address[locale] },
                   { label: t("phone"), value: siteConfig.phone, href: `tel:${siteConfig.phoneTel}` },
@@ -45,7 +45,7 @@ function ContactContent() {
                 ].map((item) => (
                   <div
                     key={item.label}
-                    className="rounded-2xl border border-cream-dark bg-white p-5"
+                    className="rounded-xl border border-cream-dark bg-white p-4 sm:rounded-2xl sm:p-5"
                   >
                     <p className="text-xs font-bold tracking-wider text-muted uppercase">
                       {item.label}

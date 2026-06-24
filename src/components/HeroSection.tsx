@@ -1,89 +1,104 @@
-import Image from "next/image";
 import { Link } from "@/i18n/navigation";
+import { practiceAreas } from "@/data/practice-areas";
+import { siteConfig } from "@/data/site";
+import HeroVideo from "./HeroVideo";
 
 type Props = {
   tagline: string;
-  title: string;
+  titleLine1: string;
+  titleLine2: string;
   subtitle: string;
   ctaContact: string;
   ctaPractice: string;
+  statPractice: string;
+  statHotline: string;
 };
 
 export default function HeroSection({
   tagline,
-  title,
+  titleLine1,
+  titleLine2,
   subtitle,
   ctaContact,
   ctaPractice,
+  statPractice,
+  statHotline,
 }: Props) {
+  const areaCount = practiceAreas.length;
+
   return (
-    <section className="relative min-h-[90vh] overflow-hidden mesh-bg text-cream">
+    <section className="relative min-h-0 overflow-hidden text-cream sm:min-h-[62vh] sm:max-h-[680px] md:min-h-[68vh]">
       <div className="absolute inset-0">
-        <Image
-          src="/images/hero-modern.jpg"
-          alt=""
-          fill
-          priority
-          className="object-cover opacity-40 mix-blend-luminosity"
-          sizes="100vw"
+        <HeroVideo
+          src={siteConfig.heroVideo}
+          poster={siteConfig.heroPoster}
+          className="h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/90 to-navy/40" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-navy/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/80 via-navy/40 to-navy/20 sm:from-navy/75 sm:via-navy/25 sm:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/50 via-transparent to-navy/25" />
       </div>
 
-      <div className="absolute -right-32 top-1/4 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
-      <div className="absolute -left-20 bottom-1/4 h-72 w-72 rounded-full bg-navy-light/50 blur-3xl" />
+      <div className="hero-float-1 absolute -right-20 top-1/4 hidden h-72 w-72 rounded-full bg-gold/5 blur-3xl sm:block md:h-96 md:w-96" />
+      <div className="hero-float-2 absolute -left-20 bottom-1/4 hidden h-56 w-56 rounded-full bg-navy-light/20 blur-3xl sm:block md:h-72 md:w-72" />
 
-      <div className="relative mx-auto flex min-h-[90vh] max-w-7xl items-center px-4 py-24 lg:px-8">
-        <div className="grid w-full items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="animate-fade-up">
-            <div className="mb-6 inline-flex items-center gap-2 rounded-full glass px-4 py-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-gold-light" />
-              <span className="text-xs font-medium tracking-[0.2em] text-gold-light uppercase">
-                {tagline}
-              </span>
-            </div>
-            <h1 className="max-w-xl font-display text-4xl leading-[1.1] font-semibold md:text-5xl lg:text-6xl">
-              <span className="gradient-text">{title}</span>
-            </h1>
-            <p className="mt-6 max-w-lg text-base leading-relaxed text-cream/70 md:text-lg">
-              {subtitle}
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <Link
-                href="/contact"
-                className="rounded-full bg-gold px-8 py-3.5 text-sm font-semibold text-navy transition-all hover:bg-gold-light hover:shadow-lg hover:shadow-gold/20"
-              >
-                {ctaContact}
-              </Link>
-              <Link
-                href="/practice-areas"
-                className="rounded-full glass px-8 py-3.5 text-sm font-semibold text-cream transition-all hover:bg-white/10"
-              >
-                {ctaPractice}
-              </Link>
-            </div>
+      <div className="relative mx-auto flex max-w-7xl flex-col justify-center px-4 py-10 sm:min-h-[62vh] sm:max-h-[680px] sm:py-14 md:min-h-[68vh] md:px-6 md:py-16 lg:px-8">
+        <div className="max-w-xl sm:max-w-3xl">
+          <div className="hero-fade-up-1 mb-4 inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 sm:mb-5 sm:px-4 sm:py-2">
+            <span className="hero-pulse-dot h-1.5 w-1.5 rounded-full bg-gold-light" />
+            <span className="text-[10px] font-medium tracking-[0.18em] text-gold-light uppercase sm:text-xs sm:tracking-[0.2em]">
+              {tagline}
+            </span>
           </div>
+          <h1 className="font-display text-[1.65rem] leading-[1.12] font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+            <span className="hero-fade-up-2 block text-cream">{titleLine1}</span>
+            <span className="hero-fade-up-3 mt-0.5 block hero-shimmer sm:mt-1">{titleLine2}</span>
+          </h1>
+          <p className="hero-fade-up-4 mt-4 line-clamp-3 font-sans text-sm leading-relaxed text-cream/75 sm:mt-5 sm:line-clamp-none sm:text-base sm:text-cream/80 md:text-lg">
+            {subtitle}
+          </p>
+          <div className="hero-fade-up-5 mt-5 flex w-fit flex-col gap-2.5 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
+            <Link
+              href="/contact"
+              className="rounded-full bg-gold px-6 py-2.5 text-sm font-semibold text-navy transition-all hover:bg-gold-light sm:px-8 sm:py-3.5"
+            >
+              {ctaContact}
+            </Link>
+            <Link
+              href="/practice-areas"
+              className="hidden rounded-full glass px-6 py-2.5 text-sm font-semibold text-cream transition-all hover:bg-white/10 sm:inline-flex sm:px-8 sm:py-3.5"
+            >
+              {ctaPractice}
+            </Link>
+          </div>
+          <a
+            href={`tel:${siteConfig.phoneTel}`}
+            className="mt-4 inline-flex items-center gap-2 font-sans text-sm text-gold-light sm:hidden"
+          >
+            <span className="text-cream/50">{statHotline}</span>
+            <span className="font-semibold">{siteConfig.phone}</span>
+          </a>
+        </div>
 
-          <div className="relative hidden lg:block">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-3xl">
-              <Image
-                src="/images/hero-modern.jpg"
-                alt=""
-                fill
-                className="object-cover"
-                sizes="(max-width: 1024px) 0vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-transparent to-transparent" />
-            </div>
-            <div className="absolute -bottom-6 -left-6 rounded-2xl glass-light p-6 shadow-2xl">
-              <p className="font-display text-3xl font-semibold text-navy">6+</p>
-              <p className="mt-1 text-sm text-muted">Practice Areas</p>
-            </div>
-            <div className="absolute -top-4 -right-4 rounded-2xl bg-gold px-5 py-4 shadow-xl">
-              <p className="text-xs font-bold tracking-widest text-navy uppercase">Sophys</p>
-              <p className="mt-0.5 text-[10px] text-navy/70">Law Firm</p>
-            </div>
+        <div className="mt-8 hidden flex-wrap items-end justify-between gap-4 md:mt-10 md:flex">
+          <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-[10px] font-medium tracking-[0.2em] text-gold-light uppercase">
+            <span className="h-1.5 w-1.5 rounded-full bg-gold-light" />
+            Ho Chi Minh City
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="/practice-areas"
+              className="hero-float-1 rounded-2xl glass-light px-5 py-4 shadow-2xl transition-transform hover:scale-[1.03]"
+            >
+              <p className="font-display text-2xl font-semibold text-navy">{areaCount}</p>
+              <p className="mt-0.5 text-xs text-muted">{statPractice}</p>
+            </Link>
+            <a
+              href={`tel:${siteConfig.phoneTel}`}
+              className="hero-float-2 rounded-2xl bg-gold px-5 py-4 shadow-xl transition-transform hover:scale-[1.03]"
+            >
+              <p className="text-[10px] font-bold tracking-widest text-navy uppercase">{statHotline}</p>
+              <p className="mt-0.5 text-sm font-semibold text-navy">{siteConfig.phone}</p>
+            </a>
           </div>
         </div>
       </div>

@@ -37,10 +37,13 @@ function HomeContent({ locale }: { locale: Locale }) {
     <>
       <HeroSection
         tagline={tMeta("tagline")}
-        title={t("heroTitle")}
+        titleLine1={t("heroTitleLine1")}
+        titleLine2={t("heroTitleLine2")}
         subtitle={t("heroSubtitle")}
         ctaContact={t("ctaContact")}
         ctaPractice={t("ctaPractice")}
+        statPractice={t("heroStatPractice")}
+        statHotline={t("heroStatHotline")}
       />
 
       <CredentialsBar locale={locale} />
@@ -53,16 +56,17 @@ function HomeContent({ locale }: { locale: Locale }) {
         besideDesc={t("besideYouDesc")}
       />
 
-      <section className="bg-paper py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+      <section className="bg-paper pt-8 pb-12 sm:pt-10 sm:pb-16 md:pt-12 md:pb-20">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeader
             label="Services"
             title={t("practiceTitle")}
             subtitle={t("practiceSubtitle")}
             linkHref="/practice-areas"
             linkText={t("viewAll")}
+            compact
           />
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-6 grid grid-cols-2 gap-2.5 sm:mt-8 sm:gap-3 md:grid-cols-2 lg:grid-cols-3">
             {practiceAreas.map((area, i) => (
               <PracticeAreaCard
                 key={area.slug}
@@ -92,8 +96,8 @@ function HomeContent({ locale }: { locale: Locale }) {
         subtitle={t("clientsSubtitle")}
       />
 
-      <section className="bg-paper py-24 md:py-32">
-        <div className="mx-auto max-w-7xl px-4 lg:px-8">
+      <section className="bg-paper py-16 sm:py-20 md:py-28 lg:py-32">
+        <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <SectionHeader
             label="Insights"
             title={t("newsTitle")}
@@ -101,7 +105,7 @@ function HomeContent({ locale }: { locale: Locale }) {
             linkHref="/news"
             linkText={t("viewAll")}
           />
-          <div className="mt-14 grid gap-6 md:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:mt-12 sm:gap-5 md:mt-14 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
             {newsArticles.map((article, i) => (
               <NewsCard
                 key={article.slug}
