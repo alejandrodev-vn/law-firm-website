@@ -25,7 +25,7 @@ export default function LanguageSwitcher({ compact = false }: Props) {
 
   return (
     <div
-      className={`flex items-center gap-0.5 rounded-lg border border-white/10 bg-white/5 p-0.5 sm:p-1 ${
+      className={`flex items-center gap-0.5 rounded-lg border border-white/15 bg-black/25 p-0.5 sm:p-1 ${
         compact ? "ml-0" : "ml-2 sm:ml-3"
       }`}
     >
@@ -36,8 +36,8 @@ export default function LanguageSwitcher({ compact = false }: Props) {
           onClick={() => switchLocale(loc.code)}
           className={`focus-ring min-h-8 rounded-md px-1.5 py-1 text-[10px] font-semibold transition-all sm:min-h-9 sm:px-2.5 sm:py-1 sm:text-xs ${
             locale === loc.code
-              ? "bg-gold/25 text-gold-light shadow-sm shadow-gold/10"
-              : "text-cream/50 hover:bg-white/5 hover:text-cream/90"
+              ? "bg-champagne text-navy shadow-sm"
+              : "text-ivory/75 hover:bg-white/8 hover:text-ivory"
           }`}
         >
           {loc.label}

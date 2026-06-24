@@ -22,8 +22,6 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const isHome = pathname === "/";
-
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
@@ -43,15 +41,11 @@ export default function Header() {
     return pathname.startsWith(href);
   };
 
-  const headerBg = scrolled
-    ? "border-b border-white/10 bg-navy/95 shadow-lg shadow-black/20"
-    : isHome
-      ? "border-b border-white/5 bg-navy/40"
-      : "border-b border-white/8 bg-navy-mid/90";
-
   return (
     <header
-      className={`sticky top-0 z-50 backdrop-blur-xl transition-all duration-500 ${headerBg}`}
+      className={`sticky top-0 z-50 transition-all duration-300 ${
+        scrolled ? "header-glass-scrolled shadow-lg shadow-black/25" : "header-glass"
+      }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2.5 sm:py-3 md:px-6 lg:px-8">
         <Link
@@ -66,7 +60,7 @@ export default function Header() {
             className="h-11 w-auto shrink-0 object-contain transition-opacity duration-300 group-hover:opacity-90 sm:h-14 md:h-16 lg:h-[4.5rem]"
             priority
           />
-          <span className="hidden border-l border-gold/20 pl-3 text-[10px] leading-relaxed tracking-[0.18em] text-gold-light uppercase sm:pl-4 sm:text-[11px] sm:tracking-[0.2em] md:block lg:max-w-[12rem]">
+          <span className="hidden border-l border-champagne/25 pl-3 text-[10px] leading-relaxed tracking-[0.18em] text-champagne/90 uppercase sm:pl-4 sm:text-[11px] sm:tracking-[0.2em] md:block lg:max-w-[12rem]">
             {tMeta("tagline")}
           </span>
         </Link>
@@ -81,8 +75,8 @@ export default function Header() {
                 data-active={active}
                 className={`nav-link focus-ring rounded-lg px-2.5 py-2.5 text-xs font-medium transition-colors duration-300 md:px-3 md:text-sm lg:px-4 ${
                   active
-                    ? "text-gold-light"
-                    : "text-cream/60 hover:text-cream"
+                    ? "text-champagne"
+                    : "text-ivory/85 hover:text-ivory"
                 }`}
               >
                 {t(item.key)}
@@ -97,7 +91,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="focus-ring rounded-lg p-2.5 text-cream/80 transition-colors hover:bg-white/10"
+            className="focus-ring rounded-lg p-2.5 text-ivory transition-colors hover:bg-white/10"
             aria-label="Toggle menu"
             aria-expanded={menuOpen}
           >
@@ -113,7 +107,7 @@ export default function Header() {
       </div>
 
       {menuOpen && (
-        <nav className="max-h-[70vh] overflow-y-auto border-t border-white/10 bg-navy/97 px-4 py-3 backdrop-blur-xl md:hidden">
+        <nav className="max-h-[70vh] overflow-y-auto border-t border-white/12 bg-[rgba(8,13,28,0.97)] px-4 py-3 backdrop-blur-xl md:hidden">
           {navItems.map((item) => {
             const active = isActive(item.href);
             return (
@@ -123,8 +117,8 @@ export default function Header() {
                 onClick={() => setMenuOpen(false)}
                 className={`focus-ring flex min-h-11 items-center gap-3 rounded-xl px-4 py-3 text-sm transition-colors ${
                   active
-                    ? "border-l-2 border-gold bg-gold/10 pl-[14px] font-medium text-gold-light"
-                    : "text-cream/75 hover:bg-white/5 hover:text-cream"
+                    ? "border-l-2 border-champagne bg-champagne/10 pl-[14px] font-medium text-champagne"
+                    : "text-ivory/80 hover:bg-white/8 hover:text-ivory"
                 }`}
               >
                 {t(item.key)}

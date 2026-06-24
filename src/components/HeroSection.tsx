@@ -34,9 +34,10 @@ export default function HeroSection({
           poster={siteConfig.heroPoster}
           className="h-full w-full object-cover object-center"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-navy/82 via-navy/45 to-navy/25 sm:from-navy/78 sm:via-navy/30 sm:to-navy/10" />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy/55 via-transparent to-navy/20" />
-        <div className="hero-pattern absolute inset-0 opacity-35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-navy/92 via-navy/60 to-navy/35 sm:from-navy/88 sm:via-navy/50 sm:to-navy/20" />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/85 via-navy/25 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy/65 via-navy/15 to-transparent" />
+        <div className="hero-pattern absolute inset-0 opacity-25" />
       </div>
 
       <div className="hero-float-1 absolute -right-20 top-1/4 hidden h-72 w-72 rounded-full bg-gold/5 blur-3xl sm:block md:h-96 md:w-96" />

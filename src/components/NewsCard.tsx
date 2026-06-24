@@ -26,11 +26,13 @@ export default function NewsCard({ article, locale, readMore, index = 0 }: Props
         className="card-hover group flex h-full flex-col overflow-hidden rounded-2xl border border-cream-dark/80 bg-white shadow-sm sm:rounded-3xl"
       >
         <div className="legal-lines relative overflow-hidden bg-gradient-to-br from-navy via-navy-mid to-navy-light px-5 py-6 sm:px-6 sm:py-8">
-          <div className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-gold/10 blur-2xl" />
-          <span className="relative inline-block rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[10px] font-semibold tracking-wider text-champagne uppercase sm:text-xs">
+          <div className="pointer-events-none absolute -right-6 -top-6 h-24 w-24 rounded-full bg-champagne/15 blur-2xl" />
+          <span className="relative inline-block rounded-full bg-champagne px-3 py-1 text-[10px] font-bold tracking-wider text-navy uppercase sm:text-xs">
             {getLocalizedText(article.category, locale)}
           </span>
-          <time className="relative mt-3 block font-sans text-xs text-cream/55">{formattedDate}</time>
+          <time className="relative mt-3 block font-sans text-xs text-ivory/75">
+            {formattedDate}
+          </time>
         </div>
         <div className="flex flex-1 flex-col p-5 sm:p-6">
           <h3 className="font-display text-base font-semibold leading-snug text-navy transition-colors duration-300 group-hover:text-burgundy sm:text-lg">
