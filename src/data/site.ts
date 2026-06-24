@@ -5,8 +5,8 @@ export const siteConfig = {
     zh: "SOPHYS律师事务所",
   },
   slogan: "BEYOND LAW. BESIDE YOU.",
-  logo: "/images/sophys-logo.png",
-  logoTransparent: "/images/sophys_law_firm_transparent.png",
+  logo: "/images/sophys-law-firm-logo.png",
+  logoTransparent: "/images/sophys-law-firm-logo.png",
   heroVideo: "/videos/hero-hcm.mp4",
   heroPoster: "/images/hero-hcm-poster.jpg",
   /** Pexels free license — https://www.pexels.com/license/ */
