@@ -20,8 +20,8 @@ export default function Footer() {
 
   return (
     <footer className="mesh-bg text-cream">
-      <div className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:gap-10 sm:py-14 md:grid-cols-2 md:gap-12 md:px-6 md:py-16 lg:grid-cols-12 lg:px-8">
-        <div className="md:col-span-2 lg:col-span-5">
+      <div className="mx-auto grid max-w-7xl grid-cols-2 gap-x-6 gap-y-8 px-4 py-10 sm:gap-x-10 sm:py-14 md:px-6 md:py-16 lg:grid-cols-12 lg:gap-x-12 lg:px-8">
+        <div className="col-span-2 lg:col-span-5">
           <Image
             src={siteConfig.logoTransparent}
             alt="SOPHYS"
@@ -29,15 +29,17 @@ export default function Footer() {
             height={100}
             className="h-12 w-auto object-contain sm:h-14"
           />
-          <p className="mt-5 text-sm leading-relaxed text-cream/60">{t("description")}</p>
+          <p className="mt-4 max-w-md text-sm leading-relaxed text-cream/60 sm:mt-5">
+            {t("description")}
+          </p>
           <p className="mt-3 text-sm text-cream/50">{siteConfig.address[locale]}</p>
         </div>
 
-        <div className="md:col-span-1 lg:col-span-3">
-          <h3 className="mb-5 text-xs font-bold tracking-[0.2em] text-gold-light uppercase">
+        <div className="col-span-1 lg:col-span-3">
+          <h3 className="mb-4 text-xs font-bold tracking-[0.2em] text-gold-light uppercase sm:mb-5">
             {t("quickLinks")}
           </h3>
-          <ul className="space-y-3">
+          <ul className="space-y-2.5 sm:space-y-3">
             {quickLinks.map((link) => (
               <li key={link.key}>
                 <Link
@@ -51,11 +53,11 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div className="md:col-span-1 lg:col-span-4">
-          <h3 className="mb-5 text-xs font-bold tracking-[0.2em] text-gold-light uppercase">
+        <div className="col-span-1 lg:col-span-4">
+          <h3 className="mb-4 text-xs font-bold tracking-[0.2em] text-gold-light uppercase sm:mb-5">
             {t("contactInfo")}
           </h3>
-          <ul className="space-y-3 text-sm">
+          <ul className="space-y-2.5 text-sm sm:space-y-3">
             <li>
               <a
                 href={`tel:${siteConfig.phoneTel}`}
