@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Link } from "@/i18n/navigation";
 
 type Breadcrumb = {
@@ -19,20 +18,10 @@ export default function PageHeader({
 }: PageHeaderProps) {
   return (
     <section className="page-hero-editorial relative overflow-hidden border-b border-[rgba(198,156,77,0.16)] text-cream">
-      <div className="absolute inset-0 page-hero-arch-lines" aria-hidden />
-      <div className="absolute inset-0 page-hero-grain" aria-hidden />
-
-      <div className="absolute inset-0">
-        <Image
-          src="/images/hero-building.jpg"
-          alt=""
-          fill
-          className="object-cover object-[center_35%] opacity-[0.14] sm:opacity-[0.18]"
-          sizes="100vw"
-          priority
-        />
-      </div>
-      <div className="absolute inset-0 bg-[#08101F]/88" aria-hidden />
+      <div className="absolute inset-0 z-0 page-hero-arch-lines" aria-hidden />
+      <div className="absolute inset-0 z-[1] page-hero-photo" aria-hidden />
+      <div className="absolute inset-0 z-[2] page-hero-overlay" aria-hidden />
+      <div className="absolute inset-0 z-[3] page-hero-grain" aria-hidden />
 
       <div
         aria-hidden
@@ -41,7 +30,7 @@ export default function PageHeader({
         S
       </div>
 
-      <div className="relative mx-auto flex min-h-[200px] max-w-7xl flex-col justify-center px-4 py-12 sm:min-h-[240px] sm:py-14 md:min-h-[280px] md:px-6 md:py-16 lg:min-h-[300px] lg:px-8 lg:py-[4.5rem]">
+      <div className="relative z-10 mx-auto flex min-h-[200px] max-w-7xl flex-col justify-center px-4 py-12 sm:min-h-[240px] sm:py-14 md:min-h-[280px] md:px-6 md:py-16 lg:min-h-[300px] lg:px-8 lg:py-[4.5rem]">
         {breadcrumb && (
           <nav
             aria-label="Breadcrumb"

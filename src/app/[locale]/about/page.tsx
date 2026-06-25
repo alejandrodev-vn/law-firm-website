@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import BrandMottoQuote from "@/components/BrandMottoQuote";
+import ProgressiveImage from "@/components/ProgressiveImage";
 import PageHeader from "@/components/PageHeader";
 import CredentialsBar from "@/components/CredentialsBar";
 import ClientsSection from "@/components/ClientsSection";
@@ -49,13 +49,15 @@ function AboutContent({ locale }: { locale: Locale }) {
       <section className="py-16 sm:py-20 md:py-28 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <div className="grid items-center gap-8 sm:gap-10 md:grid-cols-2 md:gap-12">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl shadow-2xl">
-              <Image
+            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-cream-dark shadow-2xl">
+              <ProgressiveImage
                 src="/images/about-office.jpg"
+                fallbackSrc="/images/about-office-fallback.jpg"
                 alt=""
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
               />
             </div>
             <div className="space-y-6">

@@ -232,11 +232,30 @@ h1, h2, h3, h4 {
 }
 
 .page-hero-editorial {
-  background-color: #08101f;
+  isolation: isolate;
+  background-color: #0f1a30;
   background-image:
-    radial-gradient(circle at 80% 20%, rgba(196, 160, 82, 0.09), transparent 42%),
-    radial-gradient(circle at 12% 88%, rgba(30, 42, 74, 0.38), transparent 48%),
-    radial-gradient(ellipse 70% 55% at 50% 100%, rgba(8, 16, 31, 0.85), transparent 65%);
+    radial-gradient(circle at 72% 18%, rgba(196, 160, 82, 0.14), transparent 44%),
+    radial-gradient(circle at 18% 82%, rgba(48, 68, 112, 0.28), transparent 50%),
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(92, 118, 168, 0.16), transparent 58%),
+    radial-gradient(ellipse 70% 55% at 50% 100%, rgba(8, 16, 31, 0.55), transparent 65%);
+}
+
+.page-hero-photo {
+  background-image: url("/images/hero-building.jpg");
+  background-size: cover;
+  background-position: center 35%;
+  opacity: 0.24;
+}
+
+@media (min-width: 40rem) {
+  .page-hero-photo {
+    opacity: 0.28;
+  }
+}
+
+.page-hero-overlay {
+  background-color: rgba(10, 18, 34, 0.72);
 }
 
 .page-hero-arch-lines {
@@ -255,9 +274,10 @@ h1, h2, h3, h4 {
 }
 
 .page-hero-grain {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.045) 0.6px, transparent 0.6px);
+  z-index: 3;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 0.6px, transparent 0.6px);
   background-size: 3px 3px;
-  opacity: 0.28;
+  opacity: 0.3;
   mix-blend-mode: soft-light;
 }
 
