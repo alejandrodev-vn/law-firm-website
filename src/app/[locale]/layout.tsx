@@ -2,10 +2,16 @@ import type { Metadata } from "next";
 import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { Inter, Noto_Sans_SC, Plus_Jakarta_Sans } from "next/font/google";
+import {
+  Cormorant_Garamond,
+  Inter,
+  Noto_Sans_SC,
+  Plus_Jakarta_Sans,
+} from "next/font/google";
 import { routing } from "@/i18n/routing";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingActions from "@/components/FloatingActions";
 import JsonLd from "@/components/JsonLd";
 import type { Locale } from "@/i18n/routing";
 import "../globals.css";
@@ -28,6 +34,14 @@ const notoSansSC = Noto_Sans_SC({
   variable: "--font-cjk",
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const cormorantGaramond = Cormorant_Garamond({
+  variable: "--font-editorial",
+  subsets: ["latin", "vietnamese"],
+  weight: ["600"],
+  style: ["italic"],
   display: "swap",
 });
 
@@ -92,7 +106,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html
       lang={locale}
-      className={`${inter.variable} ${plusJakarta.variable} ${notoSansSC.variable} h-full antialiased ${locale === "zh" ? "locale-zh" : ""}`}
+      className={`${inter.variable} ${plusJakarta.variable} ${notoSansSC.variable} ${cormorantGaramond.variable} h-full antialiased ${locale === "zh" ? "locale-zh" : ""}`}
     >
       <body className="flex min-h-full flex-col bg-paper font-sans text-charcoal">
         <JsonLd
@@ -104,6 +118,7 @@ export default async function LocaleLayout({ children, params }: Props) {
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <FloatingActions />
         </NextIntlClientProvider>
       </body>
     </html>

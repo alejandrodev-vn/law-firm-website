@@ -2,7 +2,6 @@
 
 import { useLayoutEffect, useRef } from "react";
 import { Link } from "@/i18n/navigation";
-import { practiceAreas } from "@/data/practice-areas";
 import { siteConfig } from "@/data/site";
 import { gsap, prefersReducedMotion, registerGsap } from "@/lib/gsap";
 import HeroVideo from "./HeroVideo";
@@ -11,10 +10,10 @@ type Props = {
   tagline: string;
   titleLine1: string;
   titleLine2: string;
+  coreValues: string;
   subtitle: string;
   ctaContact: string;
   ctaPractice: string;
-  statPractice: string;
   statHotline: string;
 };
 
@@ -22,21 +21,21 @@ export default function HeroSection({
   tagline,
   titleLine1,
   titleLine2,
+  coreValues,
   subtitle,
   ctaContact,
   ctaPractice,
-  statPractice,
   statHotline,
 }: Props) {
-  const areaCount = practiceAreas.length;
   const sectionRef = useRef<HTMLElement>(null);
   const badgeRef = useRef<HTMLDivElement>(null);
   const goldLineRef = useRef<HTMLDivElement>(null);
   const titleLine1Ref = useRef<HTMLSpanElement>(null);
   const titleLine2Ref = useRef<HTMLSpanElement>(null);
+  const coreValuesRef = useRef<HTMLParagraphElement>(null);
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
-  const statCardsRef = useRef<HTMLDivElement>(null);
+  const hotlineRef = useRef<HTMLAnchorElement>(null);
 
   useLayoutEffect(() => {
     registerGsap();
@@ -47,18 +46,15 @@ export default function HeroSection({
         badgeRef.current,
         titleLine1Ref.current,
         titleLine2Ref.current,
+        coreValuesRef.current,
         subtitleRef.current,
         ctaRef.current,
       ].filter(Boolean);
 
-      const statCards = statCardsRef.current
-        ? Array.from(statCardsRef.current.children)
-        : [];
-
       if (reduce) {
         gsap.set(fadeTargets, { opacity: 1, y: 0 });
         gsap.set(goldLineRef.current, { scaleX: 1 });
-        gsap.set(statCards, { opacity: 1, y: 0 });
+        gsap.set(hotlineRef.current, { opacity: 1, y: 0 });
         return;
       }
 
@@ -67,7 +63,7 @@ export default function HeroSection({
         scaleX: 0,
         transformOrigin: "left center",
       });
-      gsap.set(statCards, { opacity: 0, y: 24 });
+      gsap.set(hotlineRef.current, { opacity: 0, y: 24 });
 
       const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
 
@@ -88,15 +84,20 @@ export default function HeroSection({
           "-=0.6",
         )
         .to(
+          coreValuesRef.current,
+          { opacity: 1, y: 0, duration: 0.6 },
+          "-=0.65",
+        )
+        .to(
           subtitleRef.current,
           { opacity: 1, y: 0, duration: 0.7 },
           "-=0.55",
         )
         .to(ctaRef.current, { opacity: 1, y: 0, duration: 0.7 }, "-=0.55")
         .to(
-          statCards,
-          { opacity: 1, y: 0, duration: 0.75, stagger: 0.12 },
-          "-=0.45",
+          hotlineRef.current,
+          { opacity: 1, y: 0, duration: 0.7 },
+          "-=0.5",
         );
     }, sectionRef);
 
@@ -150,8 +151,14 @@ export default function HeroSection({
             </span>
           </h1>
           <p
+            ref={coreValuesRef}
+            className="mt-2.5 font-display text-[9px] font-medium tracking-[0.22em] text-gold-light/42 uppercase opacity-0 sm:mt-3 sm:text-[10px] sm:tracking-[0.28em] md:text-[11px] md:tracking-[0.32em]"
+          >
+            {coreValues}
+          </p>
+          <p
             ref={subtitleRef}
-            className="mt-4 line-clamp-3 font-sans text-sm leading-relaxed text-cream/75 opacity-0 sm:mt-5 sm:line-clamp-none sm:text-base sm:text-cream/80 md:text-lg"
+            className="mt-3 line-clamp-3 font-sans text-sm leading-relaxed text-cream/75 opacity-0 sm:mt-4 sm:line-clamp-none sm:text-base sm:text-cream/80 md:text-lg"
           >
             {subtitle}
           </p>
@@ -173,41 +180,14 @@ export default function HeroSection({
             </Link>
           </div>
           <a
+            ref={hotlineRef}
             href={`tel:${siteConfig.phoneTel}`}
-            className="mt-4 inline-flex items-center gap-2 font-sans text-sm text-gold-light sm:hidden"
+            className="mt-4 inline-flex max-w-full items-center gap-2 whitespace-nowrap font-sans text-sm opacity-0 sm:mt-5"
           >
-            <span className="text-cream/50">{statHotline}</span>
-            <span className="font-semibold">{siteConfig.phone}</span>
+            <span className="text-cream/55">{statHotline}</span>
+            <span className="text-cream/30">·</span>
+            <span className="font-semibold text-gold-light">{siteConfig.phone}</span>
           </a>
-        </div>
-
-        <div className="mt-8 hidden flex-wrap items-end justify-between gap-4 md:mt-10 md:flex">
-          <div className="inline-flex items-center gap-2 rounded-full glass px-4 py-2 text-[10px] font-medium tracking-[0.2em] text-gold-light uppercase">
-            <span className="h-1.5 w-1.5 rounded-full bg-gold-light" />
-            Ho Chi Minh City
-          </div>
-          <div ref={statCardsRef} className="flex flex-wrap gap-3">
-            <Link
-              href="/practice-areas"
-              className="rounded-2xl glass-light px-5 py-4 opacity-0 shadow-2xl transition-transform hover:scale-[1.03]"
-            >
-              <p className="font-display text-2xl font-semibold text-navy">
-                {areaCount}
-              </p>
-              <p className="mt-0.5 text-xs text-muted">{statPractice}</p>
-            </Link>
-            <a
-              href={`tel:${siteConfig.phoneTel}`}
-              className="rounded-2xl bg-gold px-5 py-4 opacity-0 shadow-xl transition-transform hover:scale-[1.03]"
-            >
-              <p className="text-[10px] font-bold tracking-widest text-navy uppercase">
-                {statHotline}
-              </p>
-              <p className="mt-0.5 text-sm font-semibold text-navy">
-                {siteConfig.phone}
-              </p>
-            </a>
-          </div>
         </div>
       </div>
     </section>

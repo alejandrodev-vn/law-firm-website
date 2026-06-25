@@ -6,6 +6,10 @@
     "taglineLine1": "BEYOND LAW.",
     "taglineLine2": "BESIDE YOU."
   },
+  "float": {
+    "scrollTop": "Scroll to top",
+    "call": "Call advisory hotline"
+  },
   "nav": {
     "home": "Home",
     "about": "About",
@@ -23,9 +27,11 @@
     "heroStatHotline": "Advisory Hotline",
     "philosophyTitle": "Our Philosophy",
     "beyondLawTitle": "BEYOND LAW",
-    "beyondLawDesc": "We understand that every legal matter is connected to business operations, investment decisions, and development goals. SOPHYS examines legal issues not only through regulations but within the context of operations, objectives, and growth direction — delivering practical, effective, and sustainable solutions.",
+    "beyondLawImageAlt": "SOPHYS Beyond Law philosophy — legal insight connected to business strategy",
+    "beyondLawDesc": "SOPHYS looks beyond regulations alone, placing every legal matter within the context of business, development goals, and clients' long-term interests — delivering practical, effective, and sustainable solutions.",
     "besideYouTitle": "BESIDE YOU",
-    "besideYouDesc": "We believe a great lawyer is not just an advisor, but a trusted partner. SOPHYS stands beside clients at every stage — from important business decisions to difficult times, crises, or disputes.",
+    "besideYouImageAlt": "SOPHYS Beside You philosophy — trusted legal partnership and ongoing counsel",
+    "besideYouDesc": "SOPHYS stands beside clients at every stage, from important business decisions to difficult times, crises, or disputes — with a spirit of listening, understanding, and protecting clients' legitimate interests.",
     "practiceTitle": "Practice Areas",
     "practiceSubtitle": "Comprehensive legal services for businesses, investors, and individuals.",
     "clientsTitle": "Our Clients",
@@ -55,20 +61,32 @@
   "about": {
     "title": "About SOPHYS LAW FIRM",
     "subtitle": "BEYOND LAW. BESIDE YOU.",
-    "intro": "SOPHYS LAW FIRM is a law firm providing legal advisory, non-litigation representation, and dispute resolution for individuals, businesses, and domestic and international investors.",
-    "scope": "We partner with clients throughout the entire business lifecycle — from investment and company formation, internal governance, commercial transactions, and project implementation to dispute resolution and protection of legitimate rights.",
-    "commitment": "With the motto \"BEYOND LAW. BESIDE YOU.\", SOPHYS not only provides legal solutions but becomes a trusted partner, helping clients manage risks, protect interests, and achieve sustainable growth.",
+    "intro": "SOPHYS LAW FIRM provides advisory, non-litigation representation, and dispute resolution for individuals, businesses, and domestic and international investors.",
+    "scope": "From investment and company formation, internal governance, and commercial transactions to projects and disputes.",
+    "commitment": "BEYOND LAW. BESIDE YOU.",
     "beyondLawTitle": "BEYOND LAW",
-    "beyondLawDesc": "We understand that every legal matter is connected to business operations, investment decisions, and development goals. We go beyond legal opinions to partner in risk management, project implementation, dispute resolution, and building practical, effective, and sustainable solutions.",
+    "beyondLawDesc": "SOPHYS understands that every legal matter is connected to business operations, investment decisions, and clients' development goals. We go beyond legal opinions to partner in risk management, project implementation, dispute resolution, and building practical, effective, and sustainable solutions.",
     "besideYouTitle": "BESIDE YOU",
-    "besideYouDesc": "We believe a great lawyer is not just an advisor, but a trusted partner. We stand beside clients at every stage, listening, understanding, and protecting legitimate interests with the highest sense of responsibility.",
+    "besideYouDesc": "SOPHYS believes a skilled lawyer is not only an advisor, but a trusted partner. We stand beside clients at every stage of growth — from critical business decisions to difficult, crisis, or dispute situations — with a spirit of listening, understanding, and protecting clients' legitimate interests.",
     "valuesTitle": "Core Values",
     "valuesSubtitle": "PARTNERSHIP · INTEGRITY · SYNERGY",
     "valuesDesc": "We build long-term partnerships with clients on the foundation of integrity, responsibility, and solid expertise, creating synergies to effectively resolve legal and business challenges.",
     "values": {
-      "partnership": "PARTNERSHIP — Long-term partnership, placing client interests first.",
-      "integrity": "INTEGRITY — Honesty, ethics, and professional standards.",
-      "synergy": "SYNERGY — Effective collaboration, creating value beyond individual solutions."
+      "partnership": {
+        "title": "Partnership",
+        "subtitle": "Long-term companionship",
+        "desc": "We build enduring relationships with clients, placing their legitimate interests and development goals at the center of everything we do."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "subtitle": "Principled and ethical",
+        "desc": "SOPHYS upholds honesty, confidentiality, accountability, and professional standards in every legal opinion we deliver."
+      },
+      "synergy": {
+        "title": "Synergy",
+        "subtitle": "Effective collaboration",
+        "desc": "We combine multidisciplinary expertise and close coordination to deliver comprehensive solutions that go beyond isolated legal advice."
+      }
     },
     "clientsTitle": "Our Clients",
     "clientsClosing": "SOPHYS strives to be a trusted legal partner, accompanying clients in risk management, problem-solving, and sustainable development."

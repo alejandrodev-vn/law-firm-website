@@ -18,10 +18,18 @@ export default async function NewsPage({ params }: Props) {
 
 function NewsContent({ locale }: { locale: Locale }) {
   const t = useTranslations("news");
+  const tNav = useTranslations("nav");
 
   return (
     <>
-      <PageHeader title={t("title")} subtitle={t("subtitle")} />
+      <PageHeader
+        title={t("title")}
+        subtitle={t("subtitle")}
+        breadcrumb={{
+          homeLabel: tNav("home"),
+          currentLabel: tNav("news"),
+        }}
+      />
       <section className="py-16 sm:py-20 md:py-28 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

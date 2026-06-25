@@ -36,6 +36,7 @@
   --color-slate: var(--slate);
   --font-sans: var(--font-body), system-ui, sans-serif;
   --font-display: var(--font-heading), var(--font-body), system-ui, sans-serif;
+  --font-manifesto: var(--font-editorial), "Libre Baskerville", "Times New Roman", serif;
 }
 
 body {
@@ -228,6 +229,36 @@ h1, h2, h3, h4 {
 .paper-texture {
   background-image: radial-gradient(rgba(196, 160, 82, 0.04) 1px, transparent 1px);
   background-size: 20px 20px;
+}
+
+.page-hero-editorial {
+  background-color: #08101f;
+  background-image:
+    radial-gradient(circle at 80% 20%, rgba(196, 160, 82, 0.09), transparent 42%),
+    radial-gradient(circle at 12% 88%, rgba(30, 42, 74, 0.38), transparent 48%),
+    radial-gradient(ellipse 70% 55% at 50% 100%, rgba(8, 16, 31, 0.85), transparent 65%);
+}
+
+.page-hero-arch-lines {
+  background-image:
+    linear-gradient(
+      118deg,
+      transparent 47.8%,
+      rgba(219, 185, 106, 0.035) 48.4%,
+      rgba(219, 185, 106, 0.035) 51.6%,
+      transparent 52.2%
+    ),
+    linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+  background-size: 100% 100%, 72px 72px, 72px 72px;
+  opacity: 0.9;
+}
+
+.page-hero-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.045) 0.6px, transparent 0.6px);
+  background-size: 3px 3px;
+  opacity: 0.28;
+  mix-blend-mode: soft-light;
 }
 
 .legal-lines {

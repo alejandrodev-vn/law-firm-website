@@ -28,6 +28,7 @@ export default async function HomePage({ params }: Props) {
 
 function HomeContent({ locale }: { locale: Locale }) {
   const t = useTranslations("home");
+  const tAbout = useTranslations("about");
   const tMeta = useTranslations("meta");
   const tNews = useTranslations("news");
   const tPractice = useTranslations("practiceAreas");
@@ -40,10 +41,10 @@ function HomeContent({ locale }: { locale: Locale }) {
         tagline={tMeta("tagline")}
         titleLine1={t("heroTitleLine1")}
         titleLine2={t("heroTitleLine2")}
+        coreValues={tAbout("valuesSubtitle")}
         subtitle={t("heroSubtitle")}
         ctaContact={t("ctaContact")}
         ctaPractice={t("ctaPractice")}
-        statPractice={t("heroStatPractice")}
         statHotline={t("heroStatHotline")}
       />
 

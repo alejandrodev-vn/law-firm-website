@@ -22,18 +22,18 @@ export default function TrustStatsSection() {
             {t("label")}
           </p>
         </Reveal>
-        <Stagger className="mt-5 grid grid-cols-3 gap-3 sm:mt-6 sm:gap-5 md:gap-6">
+        <Stagger className="mt-5 grid grid-cols-3 gap-2.5 sm:mt-6 sm:gap-5 md:gap-6">
           {stats.map((stat) => (
-            <StaggerItem key={stat.label}>
-              <div className="group rounded-2xl border border-cream-dark/90 bg-white/80 px-3 py-4 text-center shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/30 hover:shadow-md sm:px-5 sm:py-5">
-                <p className="font-display text-2xl font-semibold text-navy sm:text-3xl md:text-4xl">
+            <StaggerItem key={stat.label} className="h-full">
+              <div className="group flex h-full min-h-[5.5rem] flex-col items-center justify-center rounded-2xl border border-cream-dark/90 bg-white/80 px-2 py-3.5 text-center shadow-sm backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:border-gold/30 hover:shadow-md sm:min-h-0 sm:px-5 sm:py-5">
+                <p className="flex min-h-[1.75rem] items-center justify-center font-display text-xl font-semibold text-navy sm:min-h-0 sm:text-3xl md:text-4xl">
                   {"display" in stat ? (
                     stat.display
                   ) : (
                     <Counter value={stat.value} suffix={stat.suffix} />
                   )}
                 </p>
-                <p className="mt-1.5 font-sans text-[10px] leading-snug text-muted sm:text-xs md:text-sm">
+                <p className="mt-1 flex min-h-[2.25rem] items-center justify-center font-sans text-[9px] leading-tight text-balance text-muted sm:mt-1.5 sm:min-h-0 sm:text-xs sm:leading-snug md:text-sm">
                   {stat.label}
                 </p>
               </div>

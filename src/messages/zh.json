@@ -6,6 +6,10 @@
     "taglineLine1": "BEYOND LAW.",
     "taglineLine2": "BESIDE YOU."
   },
+  "float": {
+    "scrollTop": "返回顶部",
+    "call": "拨打咨询热线"
+  },
   "nav": {
     "home": "首页",
     "about": "关于我们",
@@ -23,9 +27,11 @@
     "heroStatHotline": "咨询热线",
     "philosophyTitle": "执业理念",
     "beyondLawTitle": "BEYOND LAW",
-    "beyondLawDesc": "我们深知每一个法律问题都与经营活动、投资决策和发展目标紧密相连。SOPHYS不仅从法规角度审视法律问题，更结合运营背景、目标和方向——提供切合实际、高效且可持续的解决方案。",
+    "beyondLawImageAlt": "SOPHYS Beyond Law 理念插图——法律视角与商业战略相结合",
+    "beyondLawDesc": "SOPHYS不仅从法规角度审视法律问题，更将其置于商业背景、发展目标与客户长远利益之中，从而提供切实、高效且可持续的解决方案。",
     "besideYouTitle": "BESIDE YOU",
-    "besideYouDesc": "我们相信优秀的律师不仅是顾问，更是值得信赖的伙伴。SOPHYS在每个阶段都与客户并肩——从重要商业决策到困难、危机或争议时刻。",
+    "besideYouImageAlt": "SOPHYS Beside You 理念插图——值得信赖的法律陪伴与咨询",
+    "besideYouDesc": "SOPHYS在每个阶段都与客户并肩，从重要商业决策到困难、危机或争议时刻，以倾听、理解并维护客户合法权益的精神相伴同行。",
     "practiceTitle": "业务领域",
     "practiceSubtitle": "为企业和投资者提供全面的法律服务。",
     "clientsTitle": "服务对象",
@@ -55,20 +61,32 @@
   "about": {
     "title": "关于SOPHYS律师事务所",
     "subtitle": "BEYOND LAW. BESIDE YOU.",
-    "intro": "SOPHYS律师事务所是一家为个人、企业、国内外投资者提供法律咨询、非诉讼代理及争议解决服务的律师事务所。",
-    "scope": "我们在企业全生命周期中与客户同行——从投资、设立企业、内部治理、商业交易、项目实施到争议解决和权益保护。",
-    "commitment": "秉承「BEYOND LAW. BESIDE YOU.」的理念，SOPHYS不仅提供法律解决方案，更成为值得信赖的合作伙伴，帮助客户管理风险、保护利益、实现可持续发展。",
+    "intro": "SOPHYS律师事务所为个人、企业、国内外投资者提供咨询、非诉讼代理及争议解决服务。",
+    "scope": "涵盖投资、设立企业、内部治理、商业交易、项目至争议解决。",
+    "commitment": "BEYOND LAW. BESIDE YOU.",
     "beyondLawTitle": "BEYOND LAW",
-    "beyondLawDesc": "我们深知每一个法律问题都与经营活动、投资决策和发展目标紧密相连。我们超越法律意见，在风险管理、项目实施、争议解决中与客户同行，构建切实、高效、可持续的解决方案。",
+    "beyondLawDesc": "SOPHYS深知每一项法律事务都与经营活动、投资决策及客户发展目标紧密相连。我们不仅提供法律意见，更在风险管理、项目实施、争议处理中与客户同行，构建切实、高效、可持续的解决方案。",
     "besideYouTitle": "BESIDE YOU",
-    "besideYouDesc": "我们相信优秀的律师不仅是顾问，更是值得信赖的伙伴。我们在每个发展阶段与客户并肩，倾听、理解并以最高的责任感保护合法权益。",
+    "besideYouDesc": "SOPHYS认为优秀的律师不仅是顾问，更是值得信赖的伙伴。我们在客户发展的每一阶段并肩同行——从重要商业决策到困难、危机或争议时刻——以倾听、理解并维护客户合法权益为指引。",
     "valuesTitle": "核心价值观",
     "valuesSubtitle": "PARTNERSHIP · INTEGRITY · SYNERGY",
     "valuesDesc": "我们在正直、责任和扎实专业的基础上与客户建立长期伙伴关系，形成协同力量，有效化解法律和商业挑战。",
     "values": {
-      "partnership": "PARTNERSHIP — 长期陪伴，将客户利益置于首位。",
-      "integrity": "INTEGRITY — 正直诚信，恪守职业规范。",
-      "synergy": "SYNERGY — 高效协作，创造超越单一方案的价值。"
+      "partnership": {
+        "title": "Partnership",
+        "subtitle": "长期同行",
+        "desc": "我们与客户建立持久关系，将客户的合法权益与发展目标置于服务的核心。"
+      },
+      "integrity": {
+        "title": "Integrity",
+        "subtitle": "正直与规范",
+        "desc": "SOPHYS在每一份法律意见中恪守诚实、保密、责任与职业规范。"
+      },
+      "synergy": {
+        "title": "Synergy",
+        "subtitle": "高效协同",
+        "desc": "我们整合多领域专业能力与紧密协作，提供超越单一法律意见的综合性解决方案。"
+      }
     },
     "clientsTitle": "服务对象",
     "clientsClosing": "SOPHYS致力于成为值得信赖的法律合作伙伴，在风险管理、问题解决和可持续发展中与客户同行。"

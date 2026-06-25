@@ -6,6 +6,10 @@
     "taglineLine1": "BEYOND LAW.",
     "taglineLine2": "BESIDE YOU."
   },
+  "float": {
+    "scrollTop": "Cuộn lên đầu trang",
+    "call": "Gọi hotline tư vấn"
+  },
   "nav": {
     "home": "Trang chủ",
     "about": "Giới thiệu",
@@ -23,9 +27,11 @@
     "heroStatHotline": "Hotline tư vấn",
     "philosophyTitle": "Phương châm hoạt động",
     "beyondLawTitle": "BEYOND LAW",
-    "beyondLawDesc": "Chúng tôi hiểu rằng mỗi vấn đề pháp lý đều gắn liền với hoạt động kinh doanh, quyết định đầu tư và mục tiêu phát triển của khách hàng. SOPHYS xem xét các vấn đề pháp lý không chỉ dưới góc độ quy định mà còn trong bối cảnh hoạt động, mục tiêu và định hướng phát triển — đưa ra giải pháp phù hợp, hiệu quả và bền vững.",
+    "beyondLawImageAlt": "Minh hoạ triết lý Beyond Law của SOPHYS — pháp lý gắn với chiến lược kinh doanh",
+    "beyondLawDesc": "SOPHYS không chỉ nhìn vấn đề pháp lý dưới góc độ quy định, mà còn đặt trong bối cảnh kinh doanh, mục tiêu phát triển và lợi ích lâu dài của khách hàng, từ đó đưa ra các giải pháp thực tiễn, hiệu quả và bền vững.",
     "besideYouTitle": "BESIDE YOU",
-    "besideYouDesc": "Chúng tôi tin rằng một luật sư giỏi không chỉ là người tư vấn, mà còn là người đồng hành đáng tin cậy. SOPHYS luôn sát cánh cùng khách hàng ở mọi giai đoạn — từ quyết định kinh doanh quan trọng đến thời điểm khó khăn, khủng hoảng hoặc tranh chấp.",
+    "besideYouImageAlt": "Minh hoạ triết lý Beside You của SOPHYS — sự đồng hành và tin cậy trong tư vấn pháp lý",
+    "besideYouDesc": "SOPHYS đồng hành cùng khách hàng ở mọi giai đoạn, từ quyết định kinh doanh quan trọng đến thời điểm khó khăn, khủng hoảng hoặc tranh chấp, với tinh thần lắng nghe, thấu hiểu và bảo vệ lợi ích hợp pháp của khách hàng.",
     "practiceTitle": "Lĩnh vực hoạt động",
     "practiceSubtitle": "Dịch vụ pháp lý toàn diện cho doanh nghiệp, nhà đầu tư và cá nhân.",
     "clientsTitle": "Đối tượng khách hàng",
@@ -55,20 +61,32 @@
   "about": {
     "title": "Về SOPHYS LAW FIRM",
     "subtitle": "BEYOND LAW. BESIDE YOU.",
-    "intro": "SOPHYS LAW FIRM là công ty luật cung cấp dịch vụ tư vấn pháp lý, đại diện ngoài tố tụng và giải quyết tranh chấp cho cá nhân, doanh nghiệp, nhà đầu tư trong nước và quốc tế.",
-    "scope": "Chúng tôi đồng hành cùng khách hàng trong toàn bộ vòng đời hoạt động kinh doanh, từ đầu tư, thành lập doanh nghiệp, quản trị nội bộ, giao dịch thương mại, triển khai dự án đến giải quyết tranh chấp và bảo vệ quyền lợi hợp pháp.",
-    "commitment": "Với phương châm \"BEYOND LAW. BESIDE YOU.\", SOPHYS không chỉ cung cấp giải pháp pháp lý mà còn trở thành đối tác đồng hành đáng tin cậy, hỗ trợ khách hàng quản trị rủi ro, bảo vệ lợi ích và phát triển bền vững.",
+    "intro": "SOPHYS LAW FIRM là công ty luật cung cấp dịch vụ tư vấn, đại diện ngoài tố tụng và giải quyết tranh chấp cho cá nhân, doanh nghiệp, nhà đầu tư trong và ngoài nước.",
+    "scope": "Từ đầu tư, thành lập doanh nghiệp, quản trị nội bộ, giao dịch thương mại, dự án đến tranh chấp.",
+    "commitment": "BEYOND LAW. BESIDE YOU.",
     "beyondLawTitle": "BEYOND LAW",
-    "beyondLawDesc": "Chúng tôi hiểu rằng mỗi vấn đề pháp lý đều gắn liền với hoạt động kinh doanh, quyết định đầu tư và mục tiêu phát triển của khách hàng. Vì vậy, chúng tôi không chỉ cung cấp ý kiến pháp lý mà còn đồng hành trong việc quản trị rủi ro, triển khai dự án, xử lý tranh chấp và xây dựng các giải pháp thực tiễn, hiệu quả và bền vững.",
+    "beyondLawDesc": "SOPHYS hiểu rằng mỗi vấn đề pháp lý đều gắn liền với hoạt động kinh doanh, quyết định đầu tư và mục tiêu phát triển của khách hàng. Vì vậy, chúng tôi không chỉ cung cấp ý kiến pháp lý, mà còn đồng hành trong quản trị rủi ro, triển khai dự án, xử lý tranh chấp và xây dựng các giải pháp thực tiễn, hiệu quả, bền vững.",
     "besideYouTitle": "BESIDE YOU",
-    "besideYouDesc": "Chúng tôi tin rằng một luật sư giỏi không chỉ là người tư vấn, mà còn là người đồng hành đáng tin cậy. Chúng tôi luôn sát cánh cùng khách hàng ở mọi giai đoạn phát triển, lắng nghe, thấu hiểu và bảo vệ lợi ích hợp pháp bằng tinh thần trách nhiệm cao nhất.",
+    "besideYouDesc": "SOPHYS tin rằng một luật sư giỏi không chỉ là người tư vấn, mà còn là người đồng hành đáng tin cậy. Chúng tôi sát cánh cùng khách hàng ở mọi giai đoạn phát triển, từ những quyết định kinh doanh quan trọng đến thời điểm khó khăn, khủng hoảng hoặc tranh chấp, với tinh thần lắng nghe, thấu hiểu và bảo vệ lợi ích hợp pháp của khách hàng.",
     "valuesTitle": "Giá trị cốt lõi",
     "valuesSubtitle": "PARTNERSHIP · INTEGRITY · SYNERGY",
     "valuesDesc": "Chúng tôi xây dựng mối quan hệ đồng hành lâu dài với khách hàng trên nền tảng của sự chính trực, trách nhiệm và chuyên môn vững chắc, từ đó tạo nên sức mạnh hợp lực để giải quyết hiệu quả các vấn đề pháp lý và kinh doanh.",
     "values": {
-      "partnership": "PARTNERSHIP — Đồng hành lâu dài, đặt lợi ích khách hàng lên hàng đầu.",
-      "integrity": "INTEGRITY — Chính trực, trung thực và tuân thủ chuẩn mực nghề nghiệp.",
-      "synergy": "SYNERGY — Phối hợp hiệu quả, tạo giá trị vượt trên từng giải pháp đơn lẻ."
+      "partnership": {
+        "title": "Partnership",
+        "subtitle": "Đồng hành lâu dài",
+        "desc": "Chúng tôi xây dựng mối quan hệ bền vững với khách hàng, đặt lợi ích hợp pháp và mục tiêu phát triển của khách hàng làm trọng tâm."
+      },
+      "integrity": {
+        "title": "Integrity",
+        "subtitle": "Chính trực và chuẩn mực",
+        "desc": "SOPHYS đề cao sự trung thực, bảo mật, trách nhiệm và tuân thủ chuẩn mực nghề nghiệp trong từng ý kiến pháp lý."
+      },
+      "synergy": {
+        "title": "Synergy",
+        "subtitle": "Hợp lực hiệu quả",
+        "desc": "Chúng tôi kết hợp chuyên môn đa lĩnh vực và phối hợp chặt chẽ để mang lại giải pháp toàn diện, vượt trên từng ý kiến pháp lý đơn lẻ."
+      }
     },
     "clientsTitle": "Đối tượng khách hàng",
     "clientsClosing": "SOPHYS luôn hướng tới việc trở thành đối tác pháp lý tin cậy, đồng hành cùng khách hàng trong việc quản trị rủi ro, giải quyết vấn đề và phát triển bền vững."

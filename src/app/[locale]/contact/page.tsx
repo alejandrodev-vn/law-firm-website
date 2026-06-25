@@ -18,11 +18,19 @@ export default async function ContactPage({ params }: Props) {
 
 function ContactContent() {
   const t = useTranslations("contact");
+  const tNav = useTranslations("nav");
   const locale = useLocale() as Locale;
 
   return (
     <>
-      <PageHeader title={t("title")} subtitle={t("subtitle")} />
+      <PageHeader
+        title={t("title")}
+        subtitle={t("subtitle")}
+        breadcrumb={{
+          homeLabel: tNav("home"),
+          currentLabel: tNav("contact"),
+        }}
+      />
       <section className="py-16 sm:py-20 md:py-28 lg:py-32">
         <div className="mx-auto max-w-7xl px-4 md:px-6 lg:px-8">
           <div className="grid gap-8 sm:gap-10 md:grid-cols-2 md:gap-12">
