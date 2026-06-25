@@ -70,6 +70,11 @@ export async function generateMetadata({
     },
     description: messages.home.heroSubtitle,
     metadataBase: new URL(siteUrl),
+    manifest: "/site.webmanifest",
+    icons: {
+      icon: [{ url: "/favicon.ico" }, { url: "/images/favicon_io/favicon-32x32.png", sizes: "32x32", type: "image/png" }],
+      apple: [{ url: "/images/favicon_io/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    },
     openGraph: {
       title: messages.meta.siteName,
       description: messages.meta.tagline,
