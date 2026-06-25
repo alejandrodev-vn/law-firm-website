@@ -2,7 +2,9 @@
   "meta": {
     "siteName": "SOPHYS LAW FIRM",
     "siteNameFull": "Công ty Luật TNHH SOPHYS",
-    "tagline": "BEYOND LAW. BESIDE YOU."
+    "tagline": "BEYOND LAW. BESIDE YOU.",
+    "taglineLine1": "BEYOND LAW.",
+    "taglineLine2": "BESIDE YOU."
   },
   "nav": {
     "home": "Trang chủ",
@@ -47,7 +49,7 @@
       "label": "Tổng quan",
       "practiceAreas": "Lĩnh vực hoạt động",
       "languages": "Ngôn ngữ hỗ trợ",
-      "location": "Trụ sở tại TP.HCM"
+      "location": "Văn phòng tại TP.HCM"
     }
   },
   "about": {

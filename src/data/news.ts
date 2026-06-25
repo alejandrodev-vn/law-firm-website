@@ -7,12 +7,15 @@ export type NewsArticle = {
   excerpt: LocalizedText;
   content: LocalizedText;
   category: LocalizedText;
+  /** Optional cover image path. Falls back to per-article placeholder in /images/news/. */
+  coverImage?: string;
 };
 
 export const newsArticles: NewsArticle[] = [
   {
     slug: "fdi-establishment-guide",
     date: "2026-03-10",
+    coverImage: "/images/news/fdi-establishment-guide.jpg",
     category: {
       vi: "FDI & Doanh nghiệp",
       en: "FDI & Corporate",
@@ -37,6 +40,7 @@ export const newsArticles: NewsArticle[] = [
   {
     slug: "customs-compliance-2026",
     date: "2026-02-15",
+    coverImage: "/images/news/customs-compliance-2026.jpg",
     category: {
       vi: "Hải quan & XNK",
       en: "Customs & Trade",
@@ -61,6 +65,7 @@ export const newsArticles: NewsArticle[] = [
   {
     slug: "outsourced-legal-counsel",
     date: "2026-01-20",
+    coverImage: "/images/news/outsourced-legal-counsel.jpg",
     category: {
       vi: "Tư vấn thường xuyên",
       en: "Ongoing Advisory",

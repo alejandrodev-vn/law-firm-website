@@ -2,7 +2,9 @@
   "meta": {
     "siteName": "SOPHYS律师事务所",
     "siteNameFull": "SOPHYS律师事务所",
-    "tagline": "BEYOND LAW. BESIDE YOU."
+    "tagline": "BEYOND LAW. BESIDE YOU.",
+    "taglineLine1": "BEYOND LAW.",
+    "taglineLine2": "BESIDE YOU."
   },
   "nav": {
     "home": "首页",

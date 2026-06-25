@@ -1,6 +1,10 @@
+"use client";
+
+import { useLayoutEffect, useRef } from "react";
 import { Link } from "@/i18n/navigation";
 import { practiceAreas } from "@/data/practice-areas";
 import { siteConfig } from "@/data/site";
+import { gsap, prefersReducedMotion, registerGsap } from "@/lib/gsap";
 import HeroVideo from "./HeroVideo";
 
 type Props = {
@@ -25,9 +29,85 @@ export default function HeroSection({
   statHotline,
 }: Props) {
   const areaCount = practiceAreas.length;
+  const sectionRef = useRef<HTMLElement>(null);
+  const badgeRef = useRef<HTMLDivElement>(null);
+  const goldLineRef = useRef<HTMLDivElement>(null);
+  const titleLine1Ref = useRef<HTMLSpanElement>(null);
+  const titleLine2Ref = useRef<HTMLSpanElement>(null);
+  const subtitleRef = useRef<HTMLParagraphElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
+  const statCardsRef = useRef<HTMLDivElement>(null);
+
+  useLayoutEffect(() => {
+    registerGsap();
+    const reduce = prefersReducedMotion();
+
+    const ctx = gsap.context(() => {
+      const fadeTargets = [
+        badgeRef.current,
+        titleLine1Ref.current,
+        titleLine2Ref.current,
+        subtitleRef.current,
+        ctaRef.current,
+      ].filter(Boolean);
+
+      const statCards = statCardsRef.current
+        ? Array.from(statCardsRef.current.children)
+        : [];
+
+      if (reduce) {
+        gsap.set(fadeTargets, { opacity: 1, y: 0 });
+        gsap.set(goldLineRef.current, { scaleX: 1 });
+        gsap.set(statCards, { opacity: 1, y: 0 });
+        return;
+      }
+
+      gsap.set(fadeTargets, { opacity: 0, y: 24 });
+      gsap.set(goldLineRef.current, {
+        scaleX: 0,
+        transformOrigin: "left center",
+      });
+      gsap.set(statCards, { opacity: 0, y: 24 });
+
+      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
+
+      tl.to(badgeRef.current, { opacity: 1, y: 0, duration: 0.7 })
+        .to(
+          goldLineRef.current,
+          { scaleX: 1, duration: 0.8 },
+          "-=0.45",
+        )
+        .to(
+          titleLine1Ref.current,
+          { opacity: 1, y: 0, duration: 0.75 },
+          "-=0.55",
+        )
+        .to(
+          titleLine2Ref.current,
+          { opacity: 1, y: 0, duration: 0.75 },
+          "-=0.6",
+        )
+        .to(
+          subtitleRef.current,
+          { opacity: 1, y: 0, duration: 0.7 },
+          "-=0.55",
+        )
+        .to(ctaRef.current, { opacity: 1, y: 0, duration: 0.7 }, "-=0.55")
+        .to(
+          statCards,
+          { opacity: 1, y: 0, duration: 0.75, stagger: 0.12 },
+          "-=0.45",
+        );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
 
   return (
-    <section className="relative min-h-0 overflow-hidden text-cream sm:min-h-[62vh] sm:max-h-[680px] md:min-h-[68vh]">
+    <section
+      ref={sectionRef}
+      className="relative min-h-0 overflow-hidden text-cream sm:min-h-[62vh] sm:max-h-[680px] md:min-h-[68vh]"
+    >
       <div className="absolute inset-0">
         <HeroVideo
           src={siteConfig.heroVideo}
@@ -45,23 +125,40 @@ export default function HeroSection({
 
       <div className="relative mx-auto flex max-w-7xl flex-col justify-center px-4 py-10 sm:min-h-[62vh] sm:max-h-[680px] sm:py-14 md:min-h-[68vh] md:px-6 md:py-16 lg:px-8">
         <div className="max-w-xl sm:max-w-3xl">
-          <div className="hero-fade-up-1 mb-4 inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 sm:mb-5 sm:px-4 sm:py-2">
+          <div
+            ref={badgeRef}
+            className="mb-4 inline-flex items-center gap-2 rounded-full glass px-3 py-1.5 opacity-0 sm:mb-5 sm:px-4 sm:py-2"
+          >
             <span className="hero-pulse-dot h-1.5 w-1.5 rounded-full bg-gold-light" />
             <span className="text-[10px] font-medium tracking-[0.18em] text-gold-light uppercase sm:text-xs sm:tracking-[0.2em]">
               {tagline}
             </span>
           </div>
-          <div className="hero-fade-up-2 mb-4 h-px w-12 bg-gradient-to-r from-gold/70 to-transparent sm:mb-5 sm:w-16" />
+          <div
+            ref={goldLineRef}
+            className="mb-4 h-px w-12 origin-left scale-x-0 bg-gradient-to-r from-gold/70 to-transparent sm:mb-5 sm:w-16"
+          />
           <h1 className="font-display text-[1.65rem] leading-[1.12] font-semibold tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
-            <span className="hero-fade-up-2 block text-cream">{titleLine1}</span>
-            <span className="hero-fade-up-3 mt-0.5 block text-champagne sm:mt-1">
+            <span ref={titleLine1Ref} className="block text-cream opacity-0">
+              {titleLine1}
+            </span>
+            <span
+              ref={titleLine2Ref}
+              className="mt-0.5 block text-champagne opacity-0 sm:mt-1"
+            >
               {titleLine2}
             </span>
           </h1>
-          <p className="hero-fade-up-4 mt-4 line-clamp-3 font-sans text-sm leading-relaxed text-cream/75 sm:mt-5 sm:line-clamp-none sm:text-base sm:text-cream/80 md:text-lg">
+          <p
+            ref={subtitleRef}
+            className="mt-4 line-clamp-3 font-sans text-sm leading-relaxed text-cream/75 opacity-0 sm:mt-5 sm:line-clamp-none sm:text-base sm:text-cream/80 md:text-lg"
+          >
             {subtitle}
           </p>
-          <div className="hero-fade-up-5 mt-5 flex w-fit flex-col gap-2.5 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
+          <div
+            ref={ctaRef}
+            className="mt-5 flex w-fit flex-col gap-2.5 opacity-0 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4"
+          >
             <Link
               href="/contact"
               className="focus-ring inline-flex min-h-11 items-center justify-center rounded-full bg-gold px-6 py-2.5 text-sm font-semibold text-navy transition-all duration-300 hover:bg-gold-light sm:px-8 sm:py-3.5"
@@ -89,20 +186,26 @@ export default function HeroSection({
             <span className="h-1.5 w-1.5 rounded-full bg-gold-light" />
             Ho Chi Minh City
           </div>
-          <div className="flex flex-wrap gap-3">
+          <div ref={statCardsRef} className="flex flex-wrap gap-3">
             <Link
               href="/practice-areas"
-              className="hero-float-1 rounded-2xl glass-light px-5 py-4 shadow-2xl transition-transform hover:scale-[1.03]"
+              className="rounded-2xl glass-light px-5 py-4 opacity-0 shadow-2xl transition-transform hover:scale-[1.03]"
             >
-              <p className="font-display text-2xl font-semibold text-navy">{areaCount}</p>
+              <p className="font-display text-2xl font-semibold text-navy">
+                {areaCount}
+              </p>
               <p className="mt-0.5 text-xs text-muted">{statPractice}</p>
             </Link>
             <a
               href={`tel:${siteConfig.phoneTel}`}
-              className="hero-float-2 rounded-2xl bg-gold px-5 py-4 shadow-xl transition-transform hover:scale-[1.03]"
+              className="rounded-2xl bg-gold px-5 py-4 opacity-0 shadow-xl transition-transform hover:scale-[1.03]"
             >
-              <p className="text-[10px] font-bold tracking-widest text-navy uppercase">{statHotline}</p>
-              <p className="mt-0.5 text-sm font-semibold text-navy">{siteConfig.phone}</p>
+              <p className="text-[10px] font-bold tracking-widest text-navy uppercase">
+                {statHotline}
+              </p>
+              <p className="mt-0.5 text-sm font-semibold text-navy">
+                {siteConfig.phone}
+              </p>
             </a>
           </div>
         </div>

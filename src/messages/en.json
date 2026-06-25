@@ -2,7 +2,9 @@
   "meta": {
     "siteName": "SOPHYS LAW FIRM",
     "siteNameFull": "SOPHYS LAW FIRM",
-    "tagline": "BEYOND LAW. BESIDE YOU."
+    "tagline": "BEYOND LAW. BESIDE YOU.",
+    "taglineLine1": "BEYOND LAW.",
+    "taglineLine2": "BESIDE YOU."
   },
   "nav": {
     "home": "Home",

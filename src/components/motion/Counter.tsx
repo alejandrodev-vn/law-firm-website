@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useInView, useReducedMotion } from "framer-motion";
+import { gsap, registerGsap } from "@/lib/gsap";
 
 type Props = {
   value: number;
@@ -20,29 +21,30 @@ export default function Counter({
   const inView = useInView(ref, { once: true, margin: "-40px" });
   const reduce = useReducedMotion();
   const [display, setDisplay] = useState(reduce ? value : 0);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
-    if (!inView) return;
+    if (!inView || hasAnimated.current) return;
+    hasAnimated.current = true;
+
     if (reduce) {
       setDisplay(value);
       return;
     }
 
-    let start = 0;
-    const startTime = performance.now();
+    registerGsap();
 
-    const tick = (now: number) => {
-      const progress = Math.min((now - startTime) / (duration * 1000), 1);
-      const eased = 1 - Math.pow(1 - progress, 3);
-      const next = Math.round(eased * value);
-      if (next !== start) {
-        start = next;
-        setDisplay(next);
-      }
-      if (progress < 1) requestAnimationFrame(tick);
+    const counter = { val: 0 };
+    const tween = gsap.to(counter, {
+      val: value,
+      duration,
+      ease: "power3.out",
+      onUpdate: () => setDisplay(Math.round(counter.val)),
+    });
+
+    return () => {
+      tween.kill();
     };
-
-    requestAnimationFrame(tick);
   }, [inView, value, duration, reduce]);
 
   return (

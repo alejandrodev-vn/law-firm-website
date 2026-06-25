@@ -60,8 +60,9 @@ export default function Header() {
             className="h-11 w-auto shrink-0 object-contain transition-opacity duration-300 group-hover:opacity-90 sm:h-14 md:h-16 lg:h-[4.5rem]"
             priority
           />
-          <span className="hidden border-l border-[#8B6A2E]/25 pl-3 text-[10px] leading-relaxed tracking-[0.18em] text-[#8B6A2E] uppercase sm:pl-4 sm:text-[11px] sm:tracking-[0.2em] md:block lg:max-w-[12rem]">
-            {tMeta("tagline")}
+          <span className="hidden min-w-0 flex-col border-l border-[#8B6A2E]/25 pl-3 leading-snug tracking-[0.16em] text-[#8B6A2E] uppercase lg:flex lg:pl-4 lg:text-[11px] lg:tracking-[0.2em]">
+            <span className="whitespace-nowrap">{tMeta("taglineLine1")}</span>
+            <span className="whitespace-nowrap">{tMeta("taglineLine2")}</span>
           </span>
         </Link>
 

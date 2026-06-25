@@ -12,9 +12,13 @@ const locales: { code: Locale; label: string }[] = [
 
 type Props = {
   compact?: boolean;
+  variant?: "light" | "dark";
 };
 
-export default function LanguageSwitcher({ compact = false }: Props) {
+export default function LanguageSwitcher({
+  compact = false,
+  variant = "light",
+}: Props) {
   const locale = useLocale() as Locale;
   const router = useRouter();
   const pathname = usePathname();
@@ -25,8 +29,12 @@ export default function LanguageSwitcher({ compact = false }: Props) {
 
   return (
     <div
-      className={`flex items-center gap-0.5 rounded-lg border border-slate-300/60 bg-slate-100/40 p-0.5 sm:p-1 ${
+      className={`flex items-center gap-0.5 rounded-lg border p-0.5 sm:p-1 ${
         compact ? "ml-0" : "ml-2 sm:ml-3"
+      } ${
+        variant === "dark"
+          ? "border-white/16 bg-white/8"
+          : "border-slate-300/60 bg-slate-100/40"
       }`}
     >
       {locales.map((loc) => (
@@ -36,8 +44,12 @@ export default function LanguageSwitcher({ compact = false }: Props) {
           onClick={() => switchLocale(loc.code)}
           className={`focus-ring min-h-8 rounded-md px-1.5 py-1 text-[10px] font-semibold transition-all sm:min-h-9 sm:px-2.5 sm:py-1 sm:text-xs ${
             locale === loc.code
-              ? "bg-champagne text-navy shadow-sm"
-              : "text-slate-600 hover:bg-slate-200/50 hover:text-slate-800"
+              ? variant === "dark"
+                ? "bg-gold/25 text-gold-light shadow-sm"
+                : "bg-champagne text-navy shadow-sm"
+              : variant === "dark"
+                ? "text-cream/75 hover:bg-white/10 hover:text-cream"
+                : "text-slate-600 hover:bg-slate-200/50 hover:text-slate-800"
           }`}
         >
           {loc.label}
