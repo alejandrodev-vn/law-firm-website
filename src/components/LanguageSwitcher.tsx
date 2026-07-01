@@ -42,7 +42,7 @@ export default function LanguageSwitcher({
           key={loc.code}
           type="button"
           onClick={() => switchLocale(loc.code)}
-          className={`focus-ring min-h-8 rounded-md px-1.5 py-1 text-[10px] font-semibold transition-all sm:min-h-9 sm:px-2.5 sm:py-1 sm:text-xs ${
+          className={`focus-ring cursor-pointer min-h-8 rounded-md px-1.5 py-1 text-[10px] font-semibold transition-all sm:min-h-9 sm:px-2.5 sm:py-1 sm:text-xs ${
             locale === loc.code
               ? variant === "dark"
                 ? "bg-gold/25 text-gold-light shadow-sm"
